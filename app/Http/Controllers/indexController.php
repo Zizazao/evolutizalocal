@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Post;
 
 class indexController extends Controller
 {
@@ -16,7 +17,7 @@ class indexController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -26,7 +27,8 @@ class indexController extends Controller
      */
     public function create()
     {
-        //
+        $url = \URL::action('indexController@store');
+        return view('postform')->with('url', $url);
     }
 
     /**
@@ -36,7 +38,15 @@ class indexController extends Controller
      */
     public function store()
     {
-        //
+        $post = new Post;
+        $post->titleh1 =\Input::get('titleh1');
+        $post->head =\Input::get('head');
+        $post->pic_url =\Input::get('pic_url');
+        $post->body =\Input::get('body');
+        $post->tags =\Input::get('tags');
+        $post->save();
+
+        return 'nice done';
     }
 
     /**

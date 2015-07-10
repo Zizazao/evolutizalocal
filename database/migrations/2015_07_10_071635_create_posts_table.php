@@ -14,13 +14,15 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('meta_tags');
-            $table->string('titulo');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('meta_title');
+            $table->string('titleh1');
             $table->mediumText('head');
+            $table->string('pic_url');
             $table->text('body');
             $table->string('tags');
             $table->timestamps();
-            $table->timestamp('published_at');
         });
     }
 

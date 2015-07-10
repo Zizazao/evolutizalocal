@@ -11,7 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'indexController@index');
+
+
+Route::group(['middleware'=> ['auth']], function()
+{
+	Route::get('create', 'indexController@create');
+
+	Route::get('store', 'indexController@store');
+
+});	
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
 
