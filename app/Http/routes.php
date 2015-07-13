@@ -13,12 +13,17 @@
 
 Route::get('/', 'indexController@index');
 
+//Show Posts
+
+Route::get('posts', 'indexController@showAll');
+
+Route::get('posts/{id}', 'indexController@show');
 
 Route::group(['middleware'=> ['auth']], function()
 {
-	Route::get('create', 'indexController@create');
+	Route::get('home', 'indexController@create');
 
-	Route::get('store', 'indexController@store');
+	Route::post('store', 'indexController@store');
 
 });	
 

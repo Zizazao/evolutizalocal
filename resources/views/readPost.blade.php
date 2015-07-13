@@ -19,13 +19,21 @@
 
             <div class="content">
 
-                <h1>Evolutiza</h1>
-
-                <a href="posts"><h2> Ver Posts </h2></a>
-
-                <a href="home"><h2> Añadir un nuevo Post </h2></a>
+                <h1>Evolutiza - {{$lastPost->titleh1}}</h1>
                 
             </div>
+
+            <div class="col-md-5">
+
+                <h3>{{$lastPost->head}}</h3>
+
+            </div>
+
+            <div class="col-md-12">
+                
+                <p>{{$lastPost->body}}</p>
+
+            </div>    
 
 
         </div>

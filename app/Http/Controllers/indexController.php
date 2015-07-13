@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Http\Requests\CreatePostRequest;
 
 class indexController extends Controller
 {
@@ -17,6 +18,8 @@ class indexController extends Controller
      */
     public function index()
     {
+        
+
         return view('welcome');
     }
 
@@ -36,7 +39,7 @@ class indexController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(CreatePostRequest $request)
     {
         $post = new Post;
         $post->titleh1 =\Input::get('titleh1');
@@ -44,9 +47,24 @@ class indexController extends Controller
         $post->pic_url =\Input::get('pic_url');
         $post->body =\Input::get('body');
         $post->tags =\Input::get('tags');
+        $post->user()->associate(\Auth::user());
         $post->save();
 
-        return 'nice done';
+        return redirect()->action('indexController@index');
+    }
+
+    /**
+     * Show all last posts.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showAll()
+    {
+        $lastPosts = Post::latest()->get();
+
+        return view('posts')->with('lastPosts', $lastPosts);
+
     }
 
     /**
@@ -57,7 +75,16 @@ class indexController extends Controller
      */
     public function show($id)
     {
-        //
+        $lastPost = Post::find($id);
+
+        if(is_null($lastPost))
+        {
+            return view('errors.noRecords');
+
+        }    
+
+        return view('readPost')->with('lastPost', $lastPost);
+
     }
 
     /**

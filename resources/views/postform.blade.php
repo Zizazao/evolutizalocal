@@ -28,7 +28,7 @@
 
             <div class="col-md-10">
 
-                {!! Form::open() !!}
+                {!! Form::open(['url' => "store"]) !!}
                     <div class='form-group'>
 
                         {!! Form::label('titleh1', 'Título') !!}
@@ -57,17 +57,17 @@
 
                     <div class='form-group'>
 
-                        {!! Form::label('body', 'Cuerpo') !!}
+                        {!! Form::label('head', 'Encabezado') !!}
 
-                        {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+                        {!! Form::textarea('head', null, ['class' => 'form-control']) !!}
 
                     </div>
 
                     <div class='form-group'>
 
-                        {!! Form::label('head', 'Encabezado') !!}
+                        {!! Form::label('body', 'Cuerpo') !!}
 
-                        {!! Form::textarea('head', null, ['class' => 'form-control']) !!}
+                        {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
 
                     </div>
 
