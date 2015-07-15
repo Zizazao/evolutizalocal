@@ -25,6 +25,13 @@ Route::group(['middleware'=> ['auth']], function()
 
 	Route::post('store', 'indexController@store');
 
+	Route::patch('posts/{id}', 'indexController@update');
+
+	Route::get('posts/{id}/edit', 'indexController@edit');
+
+
+
+
 });	
 
 Route::controllers([

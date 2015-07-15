@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
-use App\Http\Requests\CreatePostRequest;
+use App\Http\Requests\PostRequest;
 
 class indexController extends Controller
 {
@@ -39,7 +39,7 @@ class indexController extends Controller
      *
      * @return Response
      */
-    public function store(CreatePostRequest $request)
+    public function store(PostRequest $request)
     {
         $post = new Post;
         $post->titleh1 =\Input::get('titleh1');
@@ -80,7 +80,6 @@ class indexController extends Controller
         if(is_null($lastPost))
         {
             return view('errors.noRecords');
-
         }    
 
         return view('readPost')->with('lastPost', $lastPost);
@@ -95,7 +94,16 @@ class indexController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+
+        if(is_null($post))
+        {
+            return view('errors.noRecords');
+        }
+
+        return view('editPost', compact('post'));
+
+        
     }
 
     /**
@@ -104,9 +112,12 @@ class indexController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id, PostRequest $request)
     {
-        //
+        $post = Post::find($id);
+        $post->update($request->all());
+
+        return redirect('posts');
     }
 
     /**

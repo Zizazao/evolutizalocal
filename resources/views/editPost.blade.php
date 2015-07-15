@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Evolutiza - Posting</title>
+@extends('app')
 
-        <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<h1>Edit: {!! $post->titleh1 !!} </h1>
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<div class="col-md-10">
 
-    </head>
-
-    <body>
-
-        <div class="container">
-
-            <div class="content">
-
-                <h1>Evolutiza - Posting</h1>
-                
-            </div>
-
-        <hr>
-
-
-            <div class="col-md-10">
-
-                {!! Form::open(['url' => "store"]) !!}
+                {!! Form::model($post, ['method' => 'PATCH', "action" => ['indexController@update', $post->id]]) !!}
 
                 @include('errors.list')
-                
                     <div class='form-group'>
 
                         {!! Form::label('titleh1', 'Título') !!}
@@ -86,6 +63,4 @@
 
         </div>
 
-    </body>
-
-</html>
+@stop
