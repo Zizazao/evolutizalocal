@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Tag;
 use App\Http\Requests\PostRequest;
 
 class indexController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'index']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +38,10 @@ class indexController extends Controller
     public function create()
     {
         $url = \URL::action('indexController@store');
-        return view('postform')->with('url', $url);
+
+        $tags = Tag::lists('name');
+
+        return view('postform', compact('tags'))->with('url', $url)->with('');
     }
 
     /**
@@ -41,16 +51,17 @@ class indexController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $post = new Post;
-        $post->titleh1 =\Input::get('titleh1');
-        $post->head =\Input::get('head');
-        $post->pic_url =\Input::get('pic_url');
-        $post->body =\Input::get('body');
-        $post->tags =\Input::get('tags');
-        $post->user()->associate(\Auth::user());
-        $post->save();
+        $post = new Post($request->all());
 
-        return redirect()->action('indexController@index');
+        $tagIds = $request->input('tags');  //just need to store the ids records for tags
+
+        $post->tags()->attach($tagIds);
+        
+        \Auth::user()->post()->save($post);
+
+        \Session::flash('flash_message', 'Tu post ha sido creado');
+
+        return redirect()->action('indexController@showAll');
     }
 
     /**
@@ -73,9 +84,9 @@ class indexController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show(Post $lastPost)
     {
-        $lastPost = Post::find($id);
+        //$lastPost = Post::find($id);
 
         if(is_null($lastPost))
         {
@@ -92,9 +103,8 @@ class indexController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        $post = Post::find($id);
 
         if(is_null($post))
         {
@@ -112,10 +122,11 @@ class indexController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id, PostRequest $request)
+    public function update(Post $post, PostRequest $request)
     {
-        $post = Post::find($id);
         $post->update($request->all());
+
+        \Session::flash('flash_message_updated', 'Tu post ha sido actualizado');
 
         return redirect('posts');
     }

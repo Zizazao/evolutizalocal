@@ -17,22 +17,17 @@ Route::get('/', 'indexController@index');
 
 Route::get('posts', 'indexController@showAll');
 
-Route::get('posts/{id}', 'indexController@show');
+Route::get('posts/{posts}', 'indexController@show');
 
-Route::group(['middleware'=> ['auth']], function()
-{
-	Route::get('home', 'indexController@create');
+Route::get('home', 'indexController@create');
 
-	Route::post('store', 'indexController@store');
+Route::post('store', 'indexController@store');
 
-	Route::patch('posts/{id}', 'indexController@update');
+Route::patch('posts/{posts}', 'indexController@update');
 
-	Route::get('posts/{id}/edit', 'indexController@edit');
+Route::get('posts/{posts}/edit', 'indexController@edit');
 
 
-
-
-});	
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

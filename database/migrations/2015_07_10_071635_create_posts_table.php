@@ -20,7 +20,6 @@ class CreatePostsTable extends Migration
             $table->mediumText('head');
             $table->string('pic_url');
             $table->text('body');
-            $table->string('tags');
             $table->timestamps();
         });
     }

@@ -14,14 +14,12 @@ class Post extends Model
     	return $this->belongsTo('App\User');
     }
 
-//	DO IT LAZY DOG!
 
-/*
     public function tags()
     {
 
-
+    	return $this->belongsToMany('App\Tag');
     }
 
-    */
+
 }

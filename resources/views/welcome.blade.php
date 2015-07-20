@@ -3,6 +3,10 @@
     <head>
         <title>Laravel</title>
 
+        <!-- jQuery library -->
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <!-- Latest compiled and minified CSS -->
@@ -19,7 +23,7 @@
 
             <div class="content">
 
-                <h1>Evolutiza</h1>
+                <a href="{{action('indexController@index')}}"><h1>Evolutiza</h1></a>
 
                 <a href="posts"><h2> Ver Posts </h2></a>
 
