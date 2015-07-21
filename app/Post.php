@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['titleh1', 'head', 'body','pic_url', 'tags'];
+    protected $fillable = ['titleh1', 'head', 'body','pic_url'];
 
     public function user()
     {
@@ -19,6 +19,12 @@ class Post extends Model
     {
 
     	return $this->belongsToMany('App\Tag');
+    }
+
+    public function getTagListAttribute()
+    {
+
+    	return $this->tags->lists('id')->toArray();
     }
 
 

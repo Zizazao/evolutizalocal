@@ -25,14 +25,6 @@
 
                     </div>    
                     
-                    <div class='form-group'>
-
-                        {!! Form::label('tags', 'Tags') !!}
-
-                        {!! Form::text('tags', null, ['class' => 'form-control']) !!}
-
-
-                    </div>
 
                     <div class='form-group'>
 
@@ -49,6 +41,15 @@
                         {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
 
                     </div>
+
+                    <div class="form-group">
+
+                        {!! Form::label('tag', 'Tags (presiona Ctrl + click para seleccionar más de uno):') !!}
+
+                        {!! Form::select('tags[]', $tags, $post->getTagListAttribute(), ['class' => 'form-control', 'multiple']) !!}
+
+
+                    </div>   
 
                     <div class='form-group'>
 

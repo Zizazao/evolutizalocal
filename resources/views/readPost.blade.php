@@ -23,7 +23,7 @@
 
             <div class="content">
 
-            <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - {{$lastPost->titleh1}}</h1>
+                <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - {{$lastPost->titleh1}}</h1>
                 
             </div>
 
@@ -39,10 +39,20 @@
 
             </div>
 
-              
+            </div>
 
+            <div class="container">
+                <h3>Tags:</h3>
 
-        </div>
+                @foreach($lastPost->tags as $tag)
+
+                    <li> {{ $tag->name }} </li>
+
+                @endforeach
+
+            </div>
+            
+            <hr>
 
         <div class="container">
 

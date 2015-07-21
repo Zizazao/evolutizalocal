@@ -25,6 +25,8 @@ class CreateTagsTable extends Migration
 
         Schema::create('post_tag', function (Blueprint $table)
         {
+            $table->increments('id');
+
             $table->integer('post_id')->unsigned()->index();
 
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
@@ -32,8 +34,6 @@ class CreateTagsTable extends Migration
             $table->integer('tag_id')->unsigned()->index();
 
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
-
-
 
             $table->timestamps();
         });
@@ -46,8 +46,8 @@ class CreateTagsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tags');
 
+        Schema::drop('tags');
 
         Schema::drop('post_tag');
     }

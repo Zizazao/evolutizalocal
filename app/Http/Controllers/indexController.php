@@ -39,7 +39,7 @@ class indexController extends Controller
     {
         $url = \URL::action('indexController@store');
 
-        $tags = Tag::lists('name');
+        $tags = Tag::lists('name', 'id');
 
         return view('postform', compact('tags'))->with('url', $url)->with('');
     }
@@ -51,14 +51,13 @@ class indexController extends Controller
      */
     public function store(PostRequest $request)
     {
+
         $post = new Post($request->all());
-
-        $tagIds = $request->input('tags');  //just need to store the ids records for tags
-
-        $post->tags()->attach($tagIds);
         
-        \Auth::user()->post()->save($post);
+        $postSaved = \Auth::user()->post()->save($post);
 
+        $postSaved->tags()->attach($request->input('tags'));
+        
         \Session::flash('flash_message', 'Tu post ha sido creado');
 
         return redirect()->action('indexController@showAll');
@@ -86,7 +85,6 @@ class indexController extends Controller
      */
     public function show(Post $lastPost)
     {
-        //$lastPost = Post::find($id);
 
         if(is_null($lastPost))
         {
@@ -105,13 +103,14 @@ class indexController extends Controller
      */
     public function edit(Post $post)
     {
+        $tags = Tag::lists('name', 'id');
 
         if(is_null($post))
         {
             return view('errors.noRecords');
         }
 
-        return view('editPost', compact('post'));
+        return view('editPost', compact('post', 'tags'));
 
         
     }
@@ -125,6 +124,8 @@ class indexController extends Controller
     public function update(Post $post, PostRequest $request)
     {
         $post->update($request->all());
+
+        $post->tags()->sync($request->input('tags'));
 
         \Session::flash('flash_message_updated', 'Tu post ha sido actualizado');
 
