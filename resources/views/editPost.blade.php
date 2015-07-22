@@ -46,7 +46,7 @@
 
                         {!! Form::label('tag', 'Tags (presiona Ctrl + click para seleccionar más de uno):') !!}
 
-                        {!! Form::select('tags[]', $tags, $post->getTagListAttribute(), ['class' => 'form-control', 'multiple']) !!}
+                        {!! Form::select('tags[]', $tags, $post->getTagListAttribute(), ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
 
 
                     </div>   
@@ -62,5 +62,10 @@
 
 
         </div>
+    <!-- ToDo = make a way to store new tags from json -->
+
+    <script type="text/javascript">
+        $('#tag_list').select2();
+    </script>
 
 @stop

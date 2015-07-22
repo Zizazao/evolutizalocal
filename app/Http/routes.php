@@ -13,19 +13,41 @@
 
 Route::get('/', 'indexController@index');
 
-//Show Posts
+//Posts
 
 Route::get('posts', 'indexController@showAll');
 
 Route::get('posts/{posts}', 'indexController@show');
 
-Route::get('home', 'indexController@create');
+Route::get('create', 'indexController@create');
 
 Route::post('store', 'indexController@store');
 
 Route::patch('posts/{posts}', 'indexController@update');
 
 Route::get('posts/{posts}/edit', 'indexController@edit');
+
+Route::get('posts/{posts}/delete', 'indexController@destroy');
+
+//events
+
+Route::get('events', 'eventsController@index');
+
+Route::get('events/{events}', 'eventsController@show');
+
+Route::get('events/create', 'eventsController@create');
+
+Route::post('events/store', 'eventsController@store');
+
+Route::patch('events/{events}', 'eventsController@update');
+
+Route::get('events/{events}/edit', 'eventsController@edit');
+
+Route::get('events/{events}/update', 'eventsController@update');
+
+Route::get('events/{events}/destroy', 'eventsController@destroy');
+
+
 
 
 

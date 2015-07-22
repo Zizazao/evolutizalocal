@@ -27,7 +27,9 @@
 
                 <a href="posts"><h2> Ver Posts </h2></a>
 
-                <a href="home"><h2> Añadir un nuevo Post </h2></a>
+                <a href="create"><h2> Añadir un nuevo Post </h2></a>
+
+                <a href="events/create"><h2> Añadir un nuevo Evento</h2></a>
                 
             </div>
 

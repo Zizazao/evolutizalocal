@@ -50,6 +50,30 @@
 
             @endif
 
+             @if (Session::has('flash_message_destroyed'))
+
+                <div class="alert alert-success"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                    {{Session::get('flash_message_destroyed')}} 
+
+                </div>
+
+
+            @endif
+
+            @if (Session::has('flash_message_destroyFailed'))
+
+                <div class="alert alert-success"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                    {{Session::get('flash_message_destroyFailed')}} 
+
+                </div>
+
+
+            @endif
+
 
             <div class="col-md-4">
                 @foreach($lastPosts as $post)
@@ -61,6 +85,8 @@
                     <a href="{{ action('indexController@show', [$post->id]) }}"> Leer más</a>
                 </br>
                     <a href="{{action('indexController@edit', [$post->id])}}"> Editar post</a>
+                </br>    
+                    <a href="{{action('indexController@destroy', [$post->id])}}"> Borrar post</a>   
 
                 @endforeach    
 

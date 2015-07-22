@@ -133,13 +133,35 @@ class indexController extends Controller
     }
 
     /**
+     * Sync the tag list on the DB
+     */
+
+    private function syncTags(Post $post, array $tags)
+    {
+        $post->tags()->sync($tags);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy(Post $post)
+    { 
+
+        $postStatus = $post->delete();
+
+        if($postStatus)
+        {
+            \Session::flash('flash_message_destroyed', 'Tu post ha sido borrado');
+            
+            return redirect('posts');
+        }
+
+        \Session::flash('flash_message_destroyFailed', 'Tu post no ha podido ser eliminado');
+
+        return redirect('posts');
     }
+
 }
