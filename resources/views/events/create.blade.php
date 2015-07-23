@@ -34,7 +34,7 @@
 
             <div class="col-md-10">
 
-                {!! Form::open(['url' => "store"]) !!}
+                {!! Form::open(['url' => "storeevents"]) !!}
 
                 @include('errors.list')
                 
@@ -74,14 +74,20 @@
 
                     <div class='form-group'>
 
+                        {!! Form::label('date', 'Fecha del Evento:') !!}
+
+                        {!! Form::input('date', 'launch_date', null, ['class' => 'form-control']) !!}
+
+                    </div>
+
+                    <div class='form-group'>
+
                         {!! Form::submit('Enviar', ['class' => 'btn btn-primary form-control']) !!}
 
                 {!! Form::close() !!}
                 
             
-                     </div>    
-
-
+                     </div>   
             </div>
 
     </body>

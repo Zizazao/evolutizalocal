@@ -29,7 +29,7 @@
 
                 <a href="create"><h2> Añadir un nuevo Post </h2></a>
 
-                <a href="events/create"><h2> Añadir un nuevo Evento</h2></a>
+                <a href="createevents"><h2> Añadir un nuevo Evento</h2></a>
                 
             </div>
 

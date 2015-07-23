@@ -6,9 +6,22 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EventsRequest;
+
+use App\Event;
+use App\User;
 
 class eventsController extends Controller
 {
+
+    /**
+     * 
+     *
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'index']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +29,11 @@ class eventsController extends Controller
      */
     public function index()
     {
-        return view('events.showNews');    }
+
+        $events = Event::latest()->get();
+
+        return view('events.events', compact('events'));    
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -33,10 +50,16 @@ class eventsController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(EventsRequest $request)
     {
+        $events = new Event($request->all());
         
-        return redirect('events');
+        \Auth::user()->event()->save($events);
+
+        
+        \Session::flash('flash_message', 'Tu evento ha sido creado');
+
+        return redirect()->action('eventsController@index');
     }
 
     /**
@@ -48,7 +71,6 @@ class eventsController extends Controller
     public function show($id)
     {
         
-
         return view('events.read');
     }
 

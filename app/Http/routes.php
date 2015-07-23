@@ -35,9 +35,9 @@ Route::get('events', 'eventsController@index');
 
 Route::get('events/{events}', 'eventsController@show');
 
-Route::get('events/create', 'eventsController@create');
+Route::get('createevents', 'eventsController@create');
 
-Route::post('events/store', 'eventsController@store');
+Route::post('storeevents', 'eventsController@store');
 
 Route::patch('events/{events}', 'eventsController@update');
 
