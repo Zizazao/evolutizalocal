@@ -44,11 +44,9 @@ Route::post('events/store', 'eventsController@store');
 
 Route::get('events/{events}', 'eventsController@show');
 
-Route::patch('events/{events}', 'eventsController@update');
-
 Route::get('events/{events}/edit', 'eventsController@edit');
 
-Route::get('events/{events}/update', 'eventsController@update');
+Route::patch('events/{events}/update', 'eventsController@update');
 
 Route::get('events/{events}/destroy', 'eventsController@destroy');
 

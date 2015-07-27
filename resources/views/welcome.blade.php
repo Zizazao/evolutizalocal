@@ -94,11 +94,11 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Evolutiza</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="{{action('indexController@index')}}">Evolutiza</a></li>
-                                    <li><a target="_blank" href="{{action('indexController@showAll')}}">Ver Posts</a></li>
-                                    <li><a target="_blank" href="{{action('indexController@create')}}">Añadir Posts</a></li>
-                                    <li><a target="_blank" href="{{action('eventsController@index')}}">Ver Eventos</a></li>
-                                    <li><a target="_blank" href="{{action('eventsController@create')}}">Añadir Eventos</a></li>
+                                    <li><a href="{{action('indexController@index')}}">Evolutiza</a></li>
+                                    <li><a href="{{action('indexController@showAll')}}">Ver Posts</a></li>
+                                    <li><a href="{{action('indexController@create')}}">Añadir Posts</a></li>
+                                    <li><a href="{{action('eventsController@index')}}">Ver Eventos</a></li>
+                                    <li><a href="{{action('eventsController@create')}}">Añadir Eventos</a></li>
                                 </ul>
                             </li>
 
@@ -106,11 +106,11 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Option 2: One Page</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="One-Page/index.html">- One Page Template</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home2.html">- One Page Option 2</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home3.html">- One Page Option 3</a></li>
+                                    <li><a href="One-Page/index.html">- One Page Template</a></li>
+                                    <li><a href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
+                                    <li><a href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
+                                    <li><a href="One-Page/one_page_home2.html">- One Page Option 2</a></li>
+                                    <li><a href="One-Page/one_page_home3.html">- One Page Option 3</a></li>
                                 </ul>
                             </li>
                             <!-- End One Page -->
@@ -119,13 +119,13 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Option 3: Shop UI</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="Shop-UI/index.html">- Home Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-filter-list.html">- Filter List Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-add-to-cart.html">- Checkout Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-login.html">- Login Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-register.html">- Registration Page</a></li>
+                                    <li><a href="Shop-UI/index.html">- Home Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-filter-list.html">- Filter List Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-add-to-cart.html">- Checkout Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-login.html">- Login Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-register.html">- Registration Page</a></li>
                                 </ul>
                             </li>
                             <!-- End Shop UI -->
@@ -134,46 +134,46 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Option 4: Blog Template</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="Blog/index.html">- Home Page</a></li>
+                                    <li><a href="Blog/index.html">- Home Page</a></li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Blog Page Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_page_layouts1.html">Page Layouts v1</a></li>
-                                            <li><a target="_blank" href="Blog/blog_page_layouts2.html">Page Layouts v2</a></li>
-                                            <li><a target="_blank" href="Blog/blog_page_layouts3.html">Page Layouts v3</a></li>
+                                            <li><a href="Blog/blog_page_layouts1.html">Page Layouts v1</a></li>
+                                            <li><a href="Blog/blog_page_layouts2.html">Page Layouts v2</a></li>
+                                            <li><a href="Blog/blog_page_layouts3.html">Page Layouts v3</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Blog Post Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_post_layouts1.html">Post Layout v1</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts2.html">Post Layout v2</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts3.html">Post Layout v3</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts4.html">Post Layout v4</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts5.html">Post Layout v5</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts6.html">Post Layout v6</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts7.html">Post Layout v7</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts8.html">Post Layout v8</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts9.html">Post Layout v9</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts_ls.html">Left Sidebar Example</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts_fw.html">Full Width Example</a></li>
+                                            <li><a href="Blog/blog_post_layouts1.html">Post Layout v1</a></li>
+                                            <li><a href="Blog/blog_post_layouts2.html">Post Layout v2</a></li>
+                                            <li><a href="Blog/blog_post_layouts3.html">Post Layout v3</a></li>
+                                            <li><a href="Blog/blog_post_layouts4.html">Post Layout v4</a></li>
+                                            <li><a href="Blog/blog_post_layouts5.html">Post Layout v5</a></li>
+                                            <li><a href="Blog/blog_post_layouts6.html">Post Layout v6</a></li>
+                                            <li><a href="Blog/blog_post_layouts7.html">Post Layout v7</a></li>
+                                            <li><a href="Blog/blog_post_layouts8.html">Post Layout v8</a></li>
+                                            <li><a href="Blog/blog_post_layouts9.html">Post Layout v9</a></li>
+                                            <li><a href="Blog/blog_post_layouts_ls.html">Left Sidebar Example</a></li>
+                                            <li><a href="Blog/blog_post_layouts_fw.html">Full Width Example</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Grid Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_grid_1.html">Grid: 1 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2.html">Grid: 2 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_3.html">Grid: 3 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_4.html">Grid: 4 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_4_fw.html">Grid: Full Width (4 Col)</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2_rs.html">Grid: Right Sidebar (2 Col)</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2_ls.html">Grid: Left Sidebar (2 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_1.html">Grid: 1 Col</a></li>
+                                            <li><a href="Blog/blog_grid_2.html">Grid: 2 Col</a></li>
+                                            <li><a href="Blog/blog_grid_3.html">Grid: 3 Col</a></li>
+                                            <li><a href="Blog/blog_grid_4.html">Grid: 4 Col</a></li>
+                                            <li><a href="Blog/blog_grid_4_fw.html">Grid: Full Width (4 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_2_rs.html">Grid: Right Sidebar (2 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_2_ls.html">Grid: Left Sidebar (2 Col)</a></li>
                                         </ul>
                                     </li>
-                                    <li><a target="_blank" href="Blog/blog_single.html">- Single Page</a></li>
-                                    <li><a target="_blank" href="Blog/blog_home_boxed.html">- Home Boxed Page</a></li>
-                                    <li><a target="_blank" href="Blog/blog_home_boxed_space.html">- Home Boxed Space Page</a></li>
+                                    <li><a href="Blog/blog_single.html">- Single Page</a></li>
+                                    <li><a href="Blog/blog_home_boxed.html">- Home Boxed Page</a></li>
+                                    <li><a href="Blog/blog_home_boxed_space.html">- Home Boxed Space Page</a></li>
                                 </ul>
                             </li>
                             <!-- End Blog Template -->
@@ -323,46 +323,46 @@
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Corporate</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_aqua.html">Corporate Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_blue.html">Corporate Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_brown.html">Corporate Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_dark_blue.html">Corporate Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_green.html">Corporate Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_light_green.html">Corporate Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_grey.html">Corporate Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_orange.html">Corporate Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_purple.html">Corporate Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_red.html">Corporate Red Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_aqua.html">Corporate Aqua Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_blue.html">Corporate Blue Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_brown.html">Corporate Brown Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_dark_blue.html">Corporate Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_green.html">Corporate Green Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_light_green.html">Corporate Light Green Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_grey.html">Corporate Grey Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_orange.html">Corporate Orange Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_purple.html">Corporate Purple Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_red.html">Corporate Red Color</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Flat</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_aqua.html">Flat Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_blue.html">Flat Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_brown.html">Flat Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_dark_blue.html">Flat Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_green.html">Flat Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_light_green.html">Flat Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_grey.html">Flat Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_orange.html">Flat Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_purple.html">Flat Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_red.html">Flat Red Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_aqua.html">Flat Aqua Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_blue.html">Flat Blue Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_brown.html">Flat Brown Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_dark_blue.html">Flat Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_green.html">Flat Green Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_light_green.html">Flat Light Green Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_grey.html">Flat Grey Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_orange.html">Flat Orange Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_purple.html">Flat Purple Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_red.html">Flat Red Color</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Modern</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_aqua.html">Modern Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_blue.html">Modern Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_brown.html">Modern Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_dark_blue.html">Modern Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_green.html">Modern Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_light_green.html">Modern Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_grey.html">Modern Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_orange.html">Modern Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_purple.html">Modern Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_red.html">Modern Red Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_aqua.html">Modern Aqua Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_blue.html">Modern Blue Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_brown.html">Modern Brown Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_dark_blue.html">Modern Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_green.html">Modern Green Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_light_green.html">Modern Light Green Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_grey.html">Modern Grey Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_orange.html">Modern Orange Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_purple.html">Modern Purple Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_red.html">Modern Red Color</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -745,7 +745,7 @@
                             Misc
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="page_misc_blank.html">Blank page</a></li>
+                            <li><a href= tml">Blank page</a></li>
                             <li class="active"><a href="page_misc_boxed.html">Boxed Page</a></li>
                             <li><a href="page_misc_boxed_img.html">Boxed Image Page</a></li>
                             <li><a href="page_misc_boxed_fixed_header.html">Boxed Fixed Menu</a></li>

@@ -57,7 +57,7 @@ class eventsController extends Controller
         \Auth::user()->event()->save($events);
 
         
-        \Session::flash('flash_message', 'Tu evento ha sido creado');
+        \Session::flash('flash_message_event_created', 'Tu evento ha sido creado');
 
         return redirect()->action('eventsController@index');
     }
@@ -65,14 +65,12 @@ class eventsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Event  $event
      * @return Response
      */
-    public function show($id)
+    public function show(Event $event)
     {
-       // dd($event);
 
-        $event = Event::find($id);
 
         if(is_null($event))
         {
@@ -85,33 +83,51 @@ class eventsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Event  $event
      * @return Response
      */
-    public function edit($id)
+    public function edit(Event $event)
     {
-        return view('events.edit');
+
+        return view('events.edit', compact('event'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  Event  $event
+     * @param  EventRequest $request
      * @return Response
      */
-    public function update($id)
+    public function update(Event $event, EventRequest $request)
     {
+
+        $event->update($request->all());
+
+        \Session::flash('flash_message_event_updated', 'Tu evento ha sido actualizado');
+
         return redirect('events');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Event  $event
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(Event $event)
     {
+
+        $eventStatus = $event->delete();
+
+        if($eventStatus)
+        {
+            \Session::flash('flash_message_event_destroyed', 'Tu evento ha sido borrado');
+            
+            return redirect('events');
+        }
+
+        \Session::flash('flash_message_event_destroyFailed', 'Tu evento no ha podido ser eliminado');
 
         return redirect('events');
     }

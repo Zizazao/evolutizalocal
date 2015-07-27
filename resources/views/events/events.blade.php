@@ -26,6 +26,40 @@
             <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - Últimos Eventos</h1>
 
 
+            @if (Session::has('flash_message_event_created'))
+
+                <div class="alert alert-success"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                    {{Session::get('flash_message_event_created')}} 
+
+                </div>
+
+            @endif
+
+            @if (Session::has('flash_message_event_destroyed'))
+
+                <div class="alert alert-success"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                    {{Session::get('flash_message_event_destroyed')}} 
+
+                </div>
+
+            @endif
+
+            @if (Session::has('flash_message_event_updated'))
+
+                <div class="alert alert-success"> 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                    {{Session::get('flash_message_event_updated')}} 
+
+                </div>
+
+            @endif
+
+
             <div class="col-md-4">
                 @foreach($events as $event)
                     <article>
@@ -37,9 +71,9 @@
                     </article>
                     <a href="{{ action('eventsController@show', [$event->id]) }}"> Leer más</a>
                      </br>
-                    <a href=""> Editar evento</a>
+                    <a href="{{ action('eventsController@edit', [$event->id]) }}"> Editar evento</a>
                      </br>    
-                    <a href=""> Borrar evento</a>   
+                    <a href="{{ action('eventsController@destroy', [$event->id]) }}"> Borrar evento</a>   
 
                 @endforeach    
 
@@ -48,6 +82,8 @@
 
 
         </div>
+
+    </div>
 
     </body>
 
