@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use App\Tag;
 use App\Http\Requests\PostRequest;
+use App\Event;
 
 class indexController extends Controller
 {
@@ -25,9 +26,14 @@ class indexController extends Controller
      */
     public function index()
     {
-        
 
-        return view('welcome');
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+
+        return view('welcome')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2);
     }
 
     /**
@@ -37,11 +43,11 @@ class indexController extends Controller
      */
     public function create()
     {
-        $url = \URL::action('indexController@store');
+        $url = \URL::action('eventsController@store');
 
         $tags = Tag::lists('name', 'id');
 
-        return view('postform', compact('tags'))->with('url', $url)->with('');
+        return view('posts.postform', compact('tags'))->with('url', $url)->with('');
     }
 
     /**
@@ -51,6 +57,10 @@ class indexController extends Controller
      */
     public function store(PostRequest $request)
     {
+
+        $file = \Input::file('pic_url');
+
+        $file->move(public_path().'/postimages/', $file->getClientOriginalName());
 
         $post = new Post($request->all());
         
@@ -73,7 +83,7 @@ class indexController extends Controller
     {
         $lastPosts = Post::latest()->get();
 
-        return view('posts')->with('lastPosts', $lastPosts);
+        return view('posts.posts')->with('lastPosts', $lastPosts);
 
     }
 
@@ -91,7 +101,7 @@ class indexController extends Controller
             return view('errors.noRecords');
         }    
 
-        return view('readPost')->with('lastPost', $lastPost);
+        return view('posts.readPost')->with('lastPost', $lastPost);
 
     }
 
@@ -110,7 +120,7 @@ class indexController extends Controller
             return view('errors.noRecords');
         }
 
-        return view('editPost', compact('post', 'tags'));
+        return view('posts.editpost', compact('post', 'tags'));
 
         
     }

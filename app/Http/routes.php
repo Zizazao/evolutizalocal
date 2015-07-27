@@ -30,14 +30,19 @@ Route::get('posts/{posts}/edit', 'indexController@edit');
 Route::get('posts/{posts}/delete', 'indexController@destroy');
 
 //events
+/*
+Route::get('index', function(){
+	return view('index');
+});
+*/
 
 Route::get('events', 'eventsController@index');
 
+Route::get('events/create', 'eventsController@create');
+
+Route::post('events/store', 'eventsController@store');
+
 Route::get('events/{events}', 'eventsController@show');
-
-Route::get('createevents', 'eventsController@create');
-
-Route::post('storeevents', 'eventsController@store');
 
 Route::patch('events/{events}', 'eventsController@update');
 

@@ -28,23 +28,18 @@
 
             <div class="col-md-4">
                 @foreach($events as $event)
-
-                    <h2>{{$event->title}}</h2>
-
-                    <p>Header del evento: <br>{{$event->head}}</p>
-                    <hr>
-
-                    <p><h4>Url de la foto(not yet done):</h4><br>{{$event->pic_url}}</p>
-                    <hr>    
-                    <p><h4>Cuerpo del evento(info a cascoporro):</h4><br>{{$event->body}}</p>
-                    <hr>    
-                    <p><h4>Fecha del Evento:</h4><br> {{$event->launch_date}}</p>
-                    <hr>
-                    <a href="{{ action('indexController@show', [$event->id]) }}"> Leer más</a>
-                </br>
-                    <a href="{{action('indexController@edit', [$event->id])}}"> Editar evento</a>
-                </br>    
-                    <a href="{{action('indexController@destroy', [$event->id])}}"> Borrar evento</a>   
+                    <article>
+                        <h2>{{$event->title}}</h2>
+                        <p>{{$event->head}}</p>
+                        <hr>
+                        <p><h5>Fecha del Evento:</h5>{{$event->launch_date}}</p>
+                        <hr>
+                    </article>
+                    <a href="{{ action('eventsController@show', [$event->id]) }}"> Leer más</a>
+                     </br>
+                    <a href=""> Editar evento</a>
+                     </br>    
+                    <a href=""> Borrar evento</a>   
 
                 @endforeach    
 

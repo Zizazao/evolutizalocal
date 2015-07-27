@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('titleh1');
             $table->mediumText('head');
             $table->string('pic_url');
+            $table->string('img_name');
             $table->text('body');
             $table->timestamps();
         });

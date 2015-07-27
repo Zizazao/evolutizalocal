@@ -34,7 +34,7 @@
 
             <div class="col-md-10">
 
-                {!! Form::open(['url' => "storeevents"]) !!}
+                {!! Form::open(['url' => "events/store"]) !!}
 
                 @include('errors.list')
                 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\EventsRequest;
+use App\Http\Requests\EventRequest;
 
 use App\Event;
 use App\User;
@@ -50,7 +50,7 @@ class eventsController extends Controller
      *
      * @return Response
      */
-    public function store(EventsRequest $request)
+    public function store(EventRequest $request)
     {
         $events = new Event($request->all());
         
@@ -70,8 +70,16 @@ class eventsController extends Controller
      */
     public function show($id)
     {
+       // dd($event);
+
+        $event = Event::find($id);
+
+        if(is_null($event))
+        {
+            return view('errors.noRecords');
+        } 
         
-        return view('events.read');
+        return view('events.read', compact('event'));
     }
 
     /**
@@ -82,8 +90,6 @@ class eventsController extends Controller
      */
     public function edit($id)
     {
-        
-
         return view('events.edit');
     }
 
@@ -95,8 +101,6 @@ class eventsController extends Controller
      */
     public function update($id)
     {
-        
-
         return redirect('events');
     }
 

@@ -1,0 +1,8 @@
+/* Add here all your css styles (customizations) */
+
+#noticias{
+ 	display: inline;
+  	margin: 10px 0 25px 0;
+  	border-bottom: 1px dotted #e4e9f0;
+  	position: relative;
+}
