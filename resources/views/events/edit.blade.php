@@ -9,6 +9,9 @@
 
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
+        <!-- ckeditor Plugin -->
+        <script src="//cdn.ckeditor.com/4.5.1/full/ckeditor.js"></script>
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -53,7 +56,14 @@
 
                         {!! Form::text('pic_url', null, ['class' => 'form-control']) !!}
 
-                    </div>    
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label('img_name', 'Nombre de la imagen') !!}
+
+                        {!! Form::text('img_name', null, ['class' => 'form-control']) !!}
+                        
+                    </div>       
                     
 
                     <div class='form-group'>
@@ -87,9 +97,15 @@
                 {!! Form::close() !!}
                 
             
-                     </div>   
+                    </div>   
             </div>
 
     </body>
+
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'body' );
+    </script>
 
 </html>

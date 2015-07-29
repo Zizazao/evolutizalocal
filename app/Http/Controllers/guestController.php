@@ -37,7 +37,11 @@ class guestController extends Controller
      */
     public function showEvent(Event $event)
     {
-        return view('guest.events', compact('event'));
+        $lastPosts = Post::latest()->get();
+
+        $lastEvents = Event::latest()->get();
+
+        return view('guest.events', compact('event'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents);
     }
 
     /**
@@ -48,11 +52,16 @@ class guestController extends Controller
      */
     public function showPost(Post $post)
     {
+
+        $lastPosts = Post::latest()->take(4)->get();
+
+        $lastEvents = Event::latest()->take(4)->get();
+
         if(is_null($post))
         {
             return view('errors.noRecords');
         }    
-        return view('guest.post', compact('post'));
+        return view('guest.post', compact('post'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents);
     }
 
 

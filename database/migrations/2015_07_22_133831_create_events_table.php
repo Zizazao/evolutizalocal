@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->mediumText('head');
             $table->string('pic_url');
+            $table->string('img_name');
             $table->text('body');
             $table->date('launch_date');
             $table->timestamps();

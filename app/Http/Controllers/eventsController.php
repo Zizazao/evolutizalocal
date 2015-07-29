@@ -52,6 +52,14 @@ class eventsController extends Controller
      */
     public function store(EventRequest $request)
     {
+
+        /*
+         $file = \Input::file('pic_url');
+
+        $file->move(public_path().'/postimages/', $file->getClientOriginalName());
+
+         */
+
         $events = new Event($request->all());
         
         \Auth::user()->event()->save($events);

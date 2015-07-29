@@ -13,28 +13,30 @@
             </div>
 
             <div class="container col-md-3">
-                <div class="headline-v2 bg-color-light"><h4>Últimos eventos</h4></div>
-                <div class="list-inline tags-v2">
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500
-                    </p>
-                </div>
-            </div>
-
-            <div class="container col-md-3">
                 <div class="headline-v2 bg-color-light"><h4>Últimas Noticias</h4></div>
                 <div class="list-inline tags-v2">
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500
-                    </p>
+
+                    @foreach($lastPosts as $postRight)
+
+                    <h5><a href="{{ action('guestController@showPost', [$post->id]) }}">{{$postRight->titleh1}}</a>
+                    <small>{{str_limit($postRight->head, $limit="75", $end="...")}}</small></h5>
+
+                    @endforeach
                 </div>
             </div>
 
             <div class="container col-md-3">
-                <div class="headline-v2 bg-color-light"><h4>Últimos eventos</h4></div>
+                <div class="headline-v2 bg-color-light"><h4>Últimos Eventos</h4></div>
                 <div class="list-inline tags-v2">
-                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500
-                    </p>
+
+                    @foreach($lastEvents as $eventRight)
+
+                    <h5><a href="{{ action('guestController@showEvent', [$eventRight->id]) }}">{{$eventRight->title}}</a>
+                    <small>{{str_limit($eventRight->head, $limit="75", $end="...")}}</small></h5>
+                    @endforeach
                 </div>
             </div>
+
 
 
 
@@ -46,7 +48,7 @@
 
             <div class="col-md-9">
                 
-                <p>{{$post->body}}</p>
+                <p>{!! $post->body !!}</p>
 
             </div>
 

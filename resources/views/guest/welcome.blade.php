@@ -177,7 +177,7 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="caption">
                         <h3><a class="hover-effect" href="{{ action('guestController@showEvent', [$event->id]) }}">{{$event->title}}</a></h3>
-                        <p>{{$event->head}}</p>
+                        <p>{{str_limit($event->head, $limit="120", $end="...")}}</p>
                         Fecha del Evento: <b>{{$event->launch_date}}</b>
                     </div>
                 </div>
@@ -189,8 +189,8 @@
                 @foreach($lastEvents2 as $event2)
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="caption">
-                        <h3><a class="hover-effect" href="{{ action('eventsController@show', [$event2->id]) }}">{{$event2->title}}</a></h3>
-                        <p>{{$event2->head}}</p>
+                        <h3><a class="hover-effect" href="{{ action('guestController@showEvent', [$event2->id]) }}">{{$event2->title}}</a></h3>
+                        <p>{{str_limit($event2->head, $limit="120", $end="...")}}</p>
                         Fecha del Evento: <b>{{$event2->launch_date}}</b>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
                             
                             <h3><a class="hover-effect" href="{{ action('guestController@showPost', [$post->id]) }}">{{$post->titleh1}}</a></h3>
                             
-                            <p>{{$post->head}}</p>
+                            <p>{{str_limit($post->head, $limit="170", $end="...")}}</p>
                         </div>
                     </div>
                 </div>

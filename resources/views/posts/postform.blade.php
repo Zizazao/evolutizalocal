@@ -13,6 +13,9 @@
 
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
+        <!-- ckeditor Plugin -->
+        <script src="//cdn.ckeditor.com/4.5.1/full/ckeditor.js"></script>
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -112,6 +115,12 @@
 
     <script type="text/javascript">
         $('#tag_list').select2();
+    </script>
+
+    <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'body' );
     </script>
 
 </html>

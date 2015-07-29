@@ -26,7 +26,6 @@ class EventRequest extends Request
         return [
             'title' => 'required',
             'head' => 'required',
-            'pic_url' => 'required',
             'body' => 'required',
             'launch_date' => 'required|date',
 
