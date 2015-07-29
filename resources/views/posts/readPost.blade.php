@@ -24,7 +24,7 @@
 
             <div class="content">
 
-                <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - {{$lastPost->titleh1}}</h1>
+                <a href="{{action('guestController@index')}}"><h1>Evolutiza</a> - {{$lastPost->titleh1}}</h1>
                 
             </div>
 
@@ -57,7 +57,7 @@
 
         <div class="container">
 
-            <a href="{{action('indexController@index')}}">A la página principal</a>
+            <a href="{{action('guestController@index')}}">A la página principal</a>
             <br>
             <a href="{{action('indexController@showAll')}}">Lista de posts</a>
             <br>

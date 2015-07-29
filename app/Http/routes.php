@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'indexController@index');
+Route::get('/', 'guestController@index');
 
 //Posts
 
@@ -29,12 +29,7 @@ Route::get('posts/{posts}/edit', 'indexController@edit');
 
 Route::get('posts/{posts}/delete', 'indexController@destroy');
 
-//events
-/*
-Route::get('index', function(){
-	return view('index');
-});
-*/
+//Events
 
 Route::get('events', 'eventsController@index');
 
@@ -49,6 +44,12 @@ Route::get('events/{events}/edit', 'eventsController@edit');
 Route::patch('events/{events}/update', 'eventsController@update');
 
 Route::get('events/{events}/destroy', 'eventsController@destroy');
+
+//Guests
+
+Route::get('guest/events/{events}', 'guestController@showEvent');
+
+Route::get('guest/posts/{posts}', 'guestController@showPost');
 
 
 

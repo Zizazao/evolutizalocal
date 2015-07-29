@@ -34,7 +34,7 @@
     <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 </head>
 
 <body class="boxed-layout container">
@@ -43,8 +43,8 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="index.html">
-                <img src="assets/img/logo1-default.png" alt="Logo">
+            <a class="logo" href="{{action('guestController@index')}}">
+                <img src="{{asset('assets/img/logo1-default.png')}}" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -90,16 +90,27 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="index.html">Option 1: Default Page</a></li>
-
-                            <!-- One Page -->
+                            <!-- Evolutiza -->
                             <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Option 2: One Page</a>
+                                <a href="javascript:void(0);">Evolutiza</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="One-Page/index.html">- One Page Template</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home2.html">- One Page Option 2</a></li>
-                                    <li><a target="_blank" href="One-Page/one_page_home3.html">- One Page Option 3</a></li>
+                                    <li><a href="{{action('guestController@index')}}">Evolutiza</a></li>
+                                    <li><a href="{{action('indexController@showAll')}}">Ver Posts</a></li>
+                                    <li><a href="{{action('indexController@create')}}">Añadir Posts</a></li>
+                                    <li><a href="{{action('eventsController@index')}}">Ver Eventos</a></li>
+                                    <li><a href="{{action('eventsController@create')}}">Añadir Eventos</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Evolutiza Guests -->
+                            <li class="dropdown-submenu">
+                                <a href="javascript:void(0);">Visitantes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="One-Page/index.html">- One Page Template</a></li>
+                                    <li><a href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
+                                    <li><a href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
+                                    <li><a href="One-Page/one_page_home2.html">- One Page Option 2</a></li>
+                                    <li><a href="One-Page/one_page_home3.html">- One Page Option 3</a></li>
                                 </ul>
                             </li>
                             <!-- End One Page -->
@@ -108,13 +119,13 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Option 3: Shop UI</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="Shop-UI/index.html">- Home Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-filter-list.html">- Filter List Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-add-to-cart.html">- Checkout Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-login.html">- Login Page</a></li>
-                                    <li><a target="_blank" href="Shop-UI/shop-ui-register.html">- Registration Page</a></li>
+                                    <li><a href="Shop-UI/index.html">- Home Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-inner.html">- Product Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-filter-list.html">- Filter List Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-add-to-cart.html">- Checkout Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-login.html">- Login Page</a></li>
+                                    <li><a href="Shop-UI/shop-ui-register.html">- Registration Page</a></li>
                                 </ul>
                             </li>
                             <!-- End Shop UI -->
@@ -123,46 +134,46 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Option 4: Blog Template</a>
                                 <ul class="dropdown-menu">
-                                    <li><a target="_blank" href="Blog/index.html">- Home Page</a></li>
+                                    <li><a href="Blog/index.html">- Home Page</a></li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Blog Page Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_page_layouts1.html">Page Layouts v1</a></li>
-                                            <li><a target="_blank" href="Blog/blog_page_layouts2.html">Page Layouts v2</a></li>
-                                            <li><a target="_blank" href="Blog/blog_page_layouts3.html">Page Layouts v3</a></li>
+                                            <li><a href="Blog/blog_page_layouts1.html">Page Layouts v1</a></li>
+                                            <li><a href="Blog/blog_page_layouts2.html">Page Layouts v2</a></li>
+                                            <li><a href="Blog/blog_page_layouts3.html">Page Layouts v3</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Blog Post Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_post_layouts1.html">Post Layout v1</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts2.html">Post Layout v2</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts3.html">Post Layout v3</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts4.html">Post Layout v4</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts5.html">Post Layout v5</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts6.html">Post Layout v6</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts7.html">Post Layout v7</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts8.html">Post Layout v8</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts9.html">Post Layout v9</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts_ls.html">Left Sidebar Example</a></li>
-                                            <li><a target="_blank" href="Blog/blog_post_layouts_fw.html">Full Width Example</a></li>
+                                            <li><a href="Blog/blog_post_layouts1.html">Post Layout v1</a></li>
+                                            <li><a href="Blog/blog_post_layouts2.html">Post Layout v2</a></li>
+                                            <li><a href="Blog/blog_post_layouts3.html">Post Layout v3</a></li>
+                                            <li><a href="Blog/blog_post_layouts4.html">Post Layout v4</a></li>
+                                            <li><a href="Blog/blog_post_layouts5.html">Post Layout v5</a></li>
+                                            <li><a href="Blog/blog_post_layouts6.html">Post Layout v6</a></li>
+                                            <li><a href="Blog/blog_post_layouts7.html">Post Layout v7</a></li>
+                                            <li><a href="Blog/blog_post_layouts8.html">Post Layout v8</a></li>
+                                            <li><a href="Blog/blog_post_layouts9.html">Post Layout v9</a></li>
+                                            <li><a href="Blog/blog_post_layouts_ls.html">Left Sidebar Example</a></li>
+                                            <li><a href="Blog/blog_post_layouts_fw.html">Full Width Example</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">- Grid Layouts</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Blog/blog_grid_1.html">Grid: 1 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2.html">Grid: 2 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_3.html">Grid: 3 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_4.html">Grid: 4 Col</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_4_fw.html">Grid: Full Width (4 Col)</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2_rs.html">Grid: Right Sidebar (2 Col)</a></li>
-                                            <li><a target="_blank" href="Blog/blog_grid_2_ls.html">Grid: Left Sidebar (2 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_1.html">Grid: 1 Col</a></li>
+                                            <li><a href="Blog/blog_grid_2.html">Grid: 2 Col</a></li>
+                                            <li><a href="Blog/blog_grid_3.html">Grid: 3 Col</a></li>
+                                            <li><a href="Blog/blog_grid_4.html">Grid: 4 Col</a></li>
+                                            <li><a href="Blog/blog_grid_4_fw.html">Grid: Full Width (4 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_2_rs.html">Grid: Right Sidebar (2 Col)</a></li>
+                                            <li><a href="Blog/blog_grid_2_ls.html">Grid: Left Sidebar (2 Col)</a></li>
                                         </ul>
                                     </li>
-                                    <li><a target="_blank" href="Blog/blog_single.html">- Single Page</a></li>
-                                    <li><a target="_blank" href="Blog/blog_home_boxed.html">- Home Boxed Page</a></li>
-                                    <li><a target="_blank" href="Blog/blog_home_boxed_space.html">- Home Boxed Space Page</a></li>
+                                    <li><a href="Blog/blog_single.html">- Single Page</a></li>
+                                    <li><a href="Blog/blog_home_boxed.html">- Home Boxed Page</a></li>
+                                    <li><a href="Blog/blog_home_boxed_space.html">- Home Boxed Space Page</a></li>
                                 </ul>
                             </li>
                             <!-- End Blog Template -->
@@ -312,46 +323,46 @@
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Corporate</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_aqua.html">Corporate Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_blue.html">Corporate Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_brown.html">Corporate Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_dark_blue.html">Corporate Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_green.html">Corporate Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_light_green.html">Corporate Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_grey.html">Corporate Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_orange.html">Corporate Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_purple.html">Corporate Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/corporate/email_corporate_red.html">Corporate Red Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_aqua.html">Corporate Aqua Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_blue.html">Corporate Blue Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_brown.html">Corporate Brown Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_dark_blue.html">Corporate Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_green.html">Corporate Green Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_light_green.html">Corporate Light Green Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_grey.html">Corporate Grey Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_orange.html">Corporate Orange Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_purple.html">Corporate Purple Color</a></li>
+                                            <li><a href="Email-Templates/corporate/email_corporate_red.html">Corporate Red Color</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Flat</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_aqua.html">Flat Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_blue.html">Flat Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_brown.html">Flat Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_dark_blue.html">Flat Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_green.html">Flat Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_light_green.html">Flat Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_grey.html">Flat Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_orange.html">Flat Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_purple.html">Flat Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/flat/email_flat_red.html">Flat Red Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_aqua.html">Flat Aqua Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_blue.html">Flat Blue Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_brown.html">Flat Brown Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_dark_blue.html">Flat Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_green.html">Flat Green Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_light_green.html">Flat Light Green Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_grey.html">Flat Grey Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_orange.html">Flat Orange Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_purple.html">Flat Purple Color</a></li>
+                                            <li><a href="Email-Templates/flat/email_flat_red.html">Flat Red Color</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
                                         <a href="javascript:void(0);">Email Modern</a>
                                         <ul class="dropdown-menu">
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_aqua.html">Modern Aqua Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_blue.html">Modern Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_brown.html">Modern Brown Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_dark_blue.html">Modern Dark Blue Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_green.html">Modern Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_light_green.html">Modern Light Green Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_grey.html">Modern Grey Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_orange.html">Modern Orange Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_purple.html">Modern Purple Color</a></li>
-                                            <li><a target="_blank" href="Email-Templates/modern/email_modern_red.html">Modern Red Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_aqua.html">Modern Aqua Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_blue.html">Modern Blue Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_brown.html">Modern Brown Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_dark_blue.html">Modern Dark Blue Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_green.html">Modern Green Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_light_green.html">Modern Light Green Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_grey.html">Modern Grey Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_orange.html">Modern Orange Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_purple.html">Modern Purple Color</a></li>
+                                            <li><a href="Email-Templates/modern/email_modern_red.html">Modern Red Color</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -411,7 +422,7 @@
                             <li><a href="page_terms.html">Terms of Service</a></li>
                             <!-- End Terms of Service -->
 
-                            <!-- Sub Level Menu -->
+
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Sub Level 1</a>
                                 <ul class="dropdown-menu no-bottom-space">
@@ -734,7 +745,7 @@
                             Misc
                         </a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="page_misc_blank.html">Blank page</a></li>
+                            <li><a href="">Blank page</a></li>
                             <li class="active"><a href="page_misc_boxed.html">Boxed Page</a></li>
                             <li><a href="page_misc_boxed_img.html">Boxed Image Page</a></li>
                             <li><a href="page_misc_boxed_fixed_header.html">Boxed Fixed Menu</a></li>
@@ -763,531 +774,3 @@
             </div><!--/end container-->
         </div><!--/navbar-collapse-->
     </div>
-    <!--=== End Header ===-->
-
-    <!--=== Slider ===-->
-    <div class="tp-banner-container">
-        <div class="tp-banner">
-            <ul>
-                <!-- SLIDE -->
-                <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 1">
-                    <!-- MAIN IMAGE -->
-                    <img src="assets/img/sliders/1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-                    <div class="tp-caption revolution-ch1 sft start"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="100"
-                        data-speed="1500"
-                        data-start="500"
-                        data-easing="Back.easeInOut"
-                        data-endeasing="Power1.easeIn"
-                        data-endspeed="300">
-                        Introducing Unify Template
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption revolution-ch2 sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="190"
-                        data-speed="1400"
-                        data-start="2000"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        We are creative technology company providing <br/>
-                        key digital services on web and mobile.
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="310"
-                        data-speed="1600"
-                        data-start="2800"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a>
-                    </div>
-                </li>
-                <!-- END SLIDE -->
-
-                <!-- SLIDE -->
-                <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 2">
-                    <!-- MAIN IMAGE -->
-                    <img src="assets/img/sliders/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-                    <div class="tp-caption revolution-ch1 sft start"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="100"
-                        data-speed="1500"
-                        data-start="500"
-                        data-easing="Back.easeInOut"
-                        data-endeasing="Power1.easeIn"
-                        data-endspeed="300">
-                        Includes 120+ Template Pages
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption revolution-ch2 sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="190"
-                        data-speed="1400"
-                        data-start="2000"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        We are creative technology company providing <br/>
-                        key digital services on web and mobile.
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="310"
-                        data-speed="1600"
-                        data-start="2800"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a>
-                    </div>
-                </li>
-                <!-- END SLIDE -->
-
-                <!-- SLIDE -->
-                <li class="revolution-mch-1" data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
-                    <!-- MAIN IMAGE -->
-                    <img src="assets/img/sliders/3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-
-                    <div class="tp-caption revolution-ch1 sft start"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="100"
-                        data-speed="1500"
-                        data-start="500"
-                        data-easing="Back.easeInOut"
-                        data-endeasing="Power1.easeIn"
-                        data-endspeed="300">
-                        Over 9000+ Satisfied Users
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption revolution-ch2 sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="190"
-                        data-speed="1400"
-                        data-start="2000"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        We are creative technology company providing <br/>
-                        key digital services on web and mobile.
-                    </div>
-
-                    <!-- LAYER -->
-                    <div class="tp-caption sft"
-                        data-x="center"
-                        data-hoffset="0"
-                        data-y="310"
-                        data-speed="1600"
-                        data-start="2800"
-                        data-easing="Power4.easeOut"
-                        data-endspeed="300"
-                        data-endeasing="Power1.easeIn"
-                        data-captionhidden="off"
-                        style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a>
-                    </div>
-                </li>
-                <!-- END SLIDE -->
-            </ul>
-            <div class="tp-bannertimer tp-bottom"></div>
-        </div>
-    </div>
-    <!--=== End Slider ===-->
-
-    <!--=== Purchase Block ===-->
-    <div class="purchase">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 animated fadeInLeft">
-                    <span>Unify is a clean and fully responsive incredible Template.</span>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
-                </div>
-                <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg"><i class="fa fa-cloud-download"></i> Download Now</a>
-                </div>
-            </div>
-        </div>
-    </div><!--/row-->
-    <!-- End Purchase Block -->
-
-    <!--=== Content Part ===-->
-    <div class="container content">
-        <!-- Service Blocks -->
-        <div class="row margin-bottom-30">
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fa fa-compress service-icon"></i>
-                    <div class="desc">
-                        <h4>Fully Responsive</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fa fa-cogs service-icon"></i>
-                    <div class="desc">
-                        <h4>HTML5 + CSS3</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service">
-                    <i class="fa fa-rocket service-icon"></i>
-                    <div class="desc">
-                        <h4>Launch Ready</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Service Blokcs -->
-
-        <!-- Recent Works -->
-        <div class="headline"><h2>Recent Works</h2></div>
-        <div class="row margin-bottom-20">
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img2.jpg" alt="" />
-                        </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>
-                    </div>
-                    <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project One</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img3.jpg" alt="" />
-                        </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>
-                    </div>
-                    <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Two</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img9.jpg" alt="" />
-                        </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>
-                    </div>
-                    <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Three</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnails thumbnail-style thumbnail-kenburn">
-                    <div class="thumbnail-img">
-                        <div class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img10.jpg" alt="" />
-                        </div>
-                        <a class="btn-more hover-effect" href="#">read more +</a>
-                    </div>
-                    <div class="caption">
-                        <h3><a class="hover-effect" href="#">Project Four</a></h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Recent Works -->
-
-        <!-- Info Blokcs -->
-        <div class="row margin-bottom-30">
-            <!-- Welcome Block -->
-            <div class="col-md-8 md-margin-bottom-40">
-                <div class="headline"><h2>Welcome To Unify</h2></div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img class="img-responsive margin-bottom-20" src="assets/img/main/img6.jpg" alt="" />
-                    </div>
-                    <div class="col-sm-8">
-                        <p>Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
-                        <ul class="list-unstyled margin-bottom-20">
-                            <li><i class="fa fa-check color-green"></i> Donec id elit non mi porta gravida</li>
-                            <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
-                            <li><i class="fa fa-check color-green"></i> Responsive Bootstrap Template</li>
-                            <li><i class="fa fa-check color-green"></i> Corporate and Creative</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <blockquote class="hero-unify">
-                    <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
-                    <small>CEO, Jack Bour</small>
-                </blockquote>
-            </div><!--/col-md-8-->
-
-            <!-- Latest Shots -->
-            <div class="col-md-4">
-                <div class="headline"><h2>Latest Shots</h2></div>
-                <div id="myCarousel" class="carousel slide carousel-v1">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="assets/img/main/img5.jpg" alt="">
-                            <div class="carousel-caption">
-                                <p>Facilisis odio, dapibus ac justo acilisis gestinas.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="assets/img/main/img4.jpg" alt="">
-                            <div class="carousel-caption">
-                                <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
-                            </div>
-                            </div>
-                        <div class="item">
-                            <img src="assets/img/main/img3.jpg" alt="">
-                            <div class="carousel-caption">
-                                <p>Justo cras odio apibus ac afilisis lingestas de.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-arrow">
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div><!--/col-md-4-->
-        </div>
-        <!-- End Info Blokcs -->
-
-        <!-- Owl Clients v1 -->
-        <div class="headline"><h2>Our Clients</h2></div>
-        <div class="owl-clients-v1">
-            <div class="item">
-                <img src="assets/img/clients4/1.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/2.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/3.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/4.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/5.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/6.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/7.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/8.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/img/clients4/9.png" alt="">
-            </div>
-        </div>
-        <!-- End Owl Clients v1 -->
-    </div><!--/container-->
-    <!-- End Content Part -->
-
-    <!--=== Footer Version 1 ===-->
-    <div class="footer-v1">
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
-                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-                        <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
-                    </div><!--/col-md-3-->
-                    <!-- End About -->
-
-                    <!-- Latest -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="posts">
-                            <div class="headline"><h2>Latest Posts</h2></div>
-                            <ul class="list-unstyled latest-list">
-                                <li>
-                                    <a href="#">Incredible content</a>
-                                    <small>May 8, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">Best shoots</a>
-                                    <small>June 23, 2014</small>
-                                </li>
-                                <li>
-                                    <a href="#">New Terms and Conditions</a>
-                                    <small>September 15, 2014</small>
-                                </li>
-                            </ul>
-                        </div>
-                    </div><!--/col-md-3-->
-                    <!-- End Latest -->
-
-                    <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>Useful Links</h2></div>
-                        <ul class="list-unstyled link-list">
-                            <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
-                        </ul>
-                    </div><!--/col-md-3-->
-                    <!-- End Link List -->
-
-                    <!-- Address -->
-                    <div class="col-md-3 map-img md-margin-bottom-40">
-                        <div class="headline"><h2>Contact Us</h2></div>
-                        <address class="md-margin-bottom-40">
-                            25, Lorem Lis Street, Orange <br />
-                            California, US <br />
-                            Phone: 800 123 3456 <br />
-                            Fax: 800 123 3456 <br />
-                            Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
-                        </address>
-                    </div><!--/col-md-3-->
-                    <!-- End Address -->
-                </div>
-            </div>
-        </div><!--/footer-->
-
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>
-                            2015 &copy; All Rights Reserved.
-                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-                        </p>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div class="col-md-6">
-                        <ul class="footer-socials list-inline">
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
-                                    <i class="fa fa-skype"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
-                                    <i class="fa fa-pinterest"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Social Links -->
-                </div>
-            </div>
-        </div><!--/copyright-->
-    </div>
-    <!--=== End Footer Version 1 ===-->
-</div><!--/wrapper-->
-
-<!-- JS Global Compulsory -->
-<script type="text/javascript" src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/jquery/jquery-migrate.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-<!-- JS Implementing Plugins -->
-<script type="text/javascript" src="{{asset('assets/plugins/back-to-top.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/smoothScroll.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/owl-carousel/owl-carousel/owl.carousel.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
-<!-- JS Customization -->
-<script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
-<!-- JS Page Level -->
-<script type="text/javascript" src="{{asset('assets/js/app.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/plugins/owl-carousel.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/plugins/revolution-slider.js')}}"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();
-        OwlCarousel.initOwlCarousel();
-        RevolutionSlider.initRSfullWidth();
-    });
-</script>
-<!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-<![endif]-->
-
-</body>
-</html>

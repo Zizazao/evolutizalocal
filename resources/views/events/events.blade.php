@@ -23,7 +23,7 @@
 
             <div class="content">
 
-            <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - Últimos Eventos</h1>
+            <a href="{{action('guestController@index')}}"><h1>Evolutiza</a> - Últimos Eventos</h1>
 
 
             @if (Session::has('flash_message_event_created'))

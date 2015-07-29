@@ -24,7 +24,7 @@
 
             <div class="content">
 
-                <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - {{$event->title}}</h1>
+                <a href="{{action('guestController@index')}}"><h1>Evolutiza</a> - {{$event->title}}</h1>
                 
             </div>
 
@@ -49,9 +49,9 @@
 
         <div class="container">
 
-            <a href="{{action('indexController@index')}}">A la página principal</a>
+            <a href="{{action('guestController@index')}}">A la página principal</a>
             <br>
-            <a href="{{action('indexController@index')}}">Lista de eventos</a>
+            <a href="{{action('guestController@index')}}">Lista de eventos</a>
             <br>
             <a href="{{action('indexController@edit', [$event->id])}}"> Editar post</a>  
 

@@ -25,7 +25,7 @@
 
             <div class="content">
 
-            <a href="{{action('indexController@index')}}"><h1>Evolutiza</a> - Posting Events</h1>
+            <a href="{{action('guestController@index')}}"><h1>Evolutiza</a> - Posting Events</h1>
                 
             </div>
 

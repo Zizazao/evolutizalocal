@@ -43,7 +43,7 @@ class indexController extends Controller
      */
     public function create()
     {
-        $url = \URL::action('eventsController@store');
+        $url = \URL::action('indexController@store');
 
         $tags = Tag::lists('name', 'id');
 
