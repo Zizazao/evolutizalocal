@@ -60,7 +60,12 @@ class indexController extends Controller
 
         $file = \Input::file('pic_url');
 
-        $file->move(public_path().'/postimages/', $file->getClientOriginalName());
+        if($file){
+
+            $file->move(public_path().'/postimages/', $file->getClientOriginalName());
+        }
+
+        
 
         $post = new Post($request->all());
         

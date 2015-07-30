@@ -27,7 +27,6 @@ class PostRequest extends Request
             'titleh1' => 'required',
             'head' => 'required',
             'body' => 'required',
-            'pic_url' => 'required',
             'img_name' => 'required',
             'tags' => 'required'
         ];

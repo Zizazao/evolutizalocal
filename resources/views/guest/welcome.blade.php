@@ -165,13 +165,13 @@
 
 
     <!--=== Content Part ===-->
-    <div class="container content">
+    <div class="container">
 
         <!-- Eventos -->
         
         <div class="headline col-md-6"><h2>Eventos</h2></div> 
         <div class="headline col-md-6" ><h2>Noticias</h2></div>
-        <div class="row margin-bottom-20">
+        
             <div class="col-md-3 col-sm-6">
                 @foreach($lastEvents as $event)
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
@@ -211,7 +211,7 @@
                     <div class="thumbnails thumbnail-style thumbnail-kenburn">
                         <div class="thumbnail-img">
                             <div class="overflow-hidden">
-                                <img class="img-responsive" src="{{asset('postimages')}}/{{$post->img_name}}" alt="" />
+                                <img class="" height="200" src="{{asset('postimages')}}/{{$post->img_name}}" alt="{{$post->img_name}}" />
                             </div>
                             <a class="btn-more hover-effect" href="{{ action('guestController@showPost', [$post->id]) }}">read more +</a>
                         </div>
@@ -232,6 +232,7 @@
         <!-- Info Blokcs -->
         <div class="row margin-bottom-30">
             <!-- Welcome Block -->
+            <div class="container">
             <div class="col-md-8 md-margin-bottom-40">
                 <div class="headline"><h2>Welcome To Unify</h2></div>
                 <div class="row">
@@ -290,6 +291,7 @@
                     </div>
                 </div>
             </div><!--/col-md-4-->
+        </div>
         </div>
         <!-- End Info Blokcs -->
 
