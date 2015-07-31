@@ -29,6 +29,13 @@ Route::get('posts/{posts}/edit', 'indexController@edit');
 
 Route::get('posts/{posts}/delete', 'indexController@destroy');
 
+//Files(images)
+
+Route::get('createimg', 'indexController@createImg');
+
+Route::post('storeimg', 'indexController@storeImg');
+
+
 //Events
 
 Route::get('events', 'eventsController@index');

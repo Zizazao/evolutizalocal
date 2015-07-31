@@ -30,6 +30,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $router->model('posts', 'App\Post');
         $router->model('events', 'App\Event');
+        $router->model('slideritems', 'App\Slideritem');
+        $router->model('footeritems', 'App\Footeritem');
     }
 
     /**

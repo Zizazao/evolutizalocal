@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="container col-md-3">
+            <div class="container col-md-3 pull-right">
                 <div class="headline-v2 bg-color-light"><h4>Últimos Eventos</h4></div>
                 <div class="list-inline tags-v2">
 
