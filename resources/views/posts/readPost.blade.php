@@ -59,9 +59,9 @@
 
             <a href="{{action('guestController@index')}}">A la página principal</a>
             <br>
-            <a href="{{action('indexController@showAll')}}">Lista de posts</a>
+            <a href="{{action('postsController@showAll')}}">Lista de posts</a>
             <br>
-            <a href="{{action('indexController@edit', [$lastPost->id])}}"> Editar post</a>  
+            <a href="{{action('postsController@edit', [$lastPost->id])}}"> Editar post</a>  
 
         </div>
     </body>

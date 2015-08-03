@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Post;
 use App\Http\Requests\PostRequest;
+use App\Slideritem;
 use App\Event;
 
 class guestController extends Controller
@@ -19,7 +20,8 @@ class guestController extends Controller
      */
     public function index()
     {
-        
+        $lastSliders = Slideritem::latest()->take(1)->get();
+
         $lastPosts= Post::latest()->take(2)->get();
         
         $lastEvents = Event::latest()->take(2)->get();

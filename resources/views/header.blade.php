@@ -95,8 +95,8 @@
                                 <a href="javascript:void(0);">Evolutiza</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{action('guestController@index')}}">Evolutiza</a></li>
-                                    <li><a href="{{action('indexController@showAll')}}">Ver Posts</a></li>
-                                    <li><a href="{{action('indexController@create')}}">Añadir Posts</a></li>
+                                    <li><a href="{{action('postsController@showAll')}}">Ver Posts</a></li>
+                                    <li><a href="{{action('postsController@create')}}">Añadir Posts</a></li>
                                     <li><a href="{{action('eventsController@index')}}">Ver Eventos</a></li>
                                     <li><a href="{{action('eventsController@create')}}">Añadir Eventos</a></li>
                                 </ul>

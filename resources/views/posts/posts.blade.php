@@ -82,11 +82,11 @@
 
                     <p>{{$post->head}}</p>
 
-                    <a href="{{ action('indexController@show', [$post->id]) }}"> Leer más</a>
+                    <a href="{{ action('postsController@show', [$post->id]) }}"> Leer más</a>
                 </br>
-                    <a href="{{action('indexController@edit', [$post->id])}}"> Editar post</a>
+                    <a href="{{action('postsController@edit', [$post->id])}}"> Editar post</a>
                 </br>    
-                    <a href="{{action('indexController@destroy', [$post->id])}}"> Borrar post</a>   
+                    <a href="{{action('postsController@destroy', [$post->id])}}"> Borrar post</a>   
 
                 @endforeach    
 

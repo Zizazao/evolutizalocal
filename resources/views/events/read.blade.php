@@ -53,7 +53,7 @@
             <br>
             <a href="{{action('guestController@index')}}">Lista de eventos</a>
             <br>
-            <a href="{{action('indexController@edit', [$event->id])}}"> Editar post</a>  
+            <a href="{{action('postsController@edit', [$event->id])}}"> Editar post</a>  
 
         </div>
     </body>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\CreateSliderRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Slideritem;
@@ -27,7 +28,9 @@ class sliderController extends Controller
      */
     public function index()
     {
-        //
+        $slider = Slideritem::latest()->get();
+
+        return view('slider.index', compact('slider'));
     }
 
     /**
@@ -37,7 +40,7 @@ class sliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('slider.form');
     }
 
     /**
@@ -46,9 +49,13 @@ class sliderController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateSliderRequest $request)
     {
-        //
+        $slider = new Slideritem($request->all());
+
+        $sliderSaved = \Auth::user()->Slider()->save($slider);
+
+        return redirect()->action('sliderController@index');
     }
 
     /**

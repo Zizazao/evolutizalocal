@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
+
 class CreateSliderRequest extends Request
 {
     /**
@@ -24,7 +25,9 @@ class CreateSliderRequest extends Request
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'subtitle' => 'required',
+            'img_name' => 'required'
         ];
     }
 }

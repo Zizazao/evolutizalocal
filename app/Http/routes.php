@@ -11,29 +11,31 @@
 |
 */
 
+//Show index for a guest
+
 Route::get('/', 'guestController@index');
 
 //Posts
 
-Route::get('posts', 'indexController@showAll');
+Route::get('posts', 'postsController@showAll');
 
-Route::get('posts/{posts}', 'indexController@show');
+Route::get('posts/{posts}', 'postsController@show');
 
-Route::get('create', 'indexController@create');
+Route::get('create', 'postsController@create');
 
-Route::post('store', 'indexController@store');
+Route::post('store', 'postsController@store');
 
-Route::patch('posts/{posts}', 'indexController@update');
+Route::patch('posts/{posts}', 'postsController@update');
 
-Route::get('posts/{posts}/edit', 'indexController@edit');
+Route::get('posts/{posts}/edit', 'postsController@edit');
 
-Route::get('posts/{posts}/delete', 'indexController@destroy');
+Route::get('posts/{posts}/delete', 'postsController@destroy');
 
 //Files(images)
 
-Route::get('createimg', 'indexController@createImg');
+Route::get('createimg', 'postsController@createImg');
 
-Route::post('storeimg', 'indexController@storeImg');
+Route::post('storeimg', 'postsController@storeImg');
 
 
 //Events
@@ -51,6 +53,12 @@ Route::get('events/{events}/edit', 'eventsController@edit');
 Route::patch('events/{events}/update', 'eventsController@update');
 
 Route::get('events/{events}/destroy', 'eventsController@destroy');
+
+//Slider
+
+Route::get('slider/create', 'sliderController@create');
+
+Route::post('slider/store', 'sliderController@store');
 
 //Guests
 

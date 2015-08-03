@@ -5,7 +5,7 @@
 	<a href="{{action('guestController@index')}}"><h1>Evolutiza</a> - Edit - {!! $post->titleh1 !!} </h1>
 	<div class="col-md-10">
 
-                {!! Form::model($post, ['method' => 'PATCH', "action" => ['indexController@update', $post->id]]) !!}
+                {!! Form::model($post, ['method' => 'PATCH', "action" => ['postsController@update', $post->id]]) !!}
 
                 @include('errors.list')
                     <div class='form-group'>
