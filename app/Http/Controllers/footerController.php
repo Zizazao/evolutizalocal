@@ -6,19 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Footeritem;
+use App\Footer;
 
 class footerController extends Controller
 {
-    /**
-     * All users has to be identified in order to access this methods
-     *
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +17,9 @@ class footerController extends Controller
      */
     public function index()
     {
-        //
+        $lastFooters = Footer::latest()->get();
+
+        return view('footer.index', compact('lastFooters'));
     }
 
     /**

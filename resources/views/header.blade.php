@@ -99,6 +99,8 @@
                                     <li><a href="{{action('postsController@create')}}">Añadir Posts</a></li>
                                     <li><a href="{{action('eventsController@index')}}">Ver Eventos</a></li>
                                     <li><a href="{{action('eventsController@create')}}">Añadir Eventos</a></li>
+                                    <li><a href="{{action('sliderController@index')}}">Ver Sliders</a></li>
+                                    <li><a href="{{action('sliderController@create')}}">Añadir Slider</a></li>
                                 </ul>
                             </li>
 

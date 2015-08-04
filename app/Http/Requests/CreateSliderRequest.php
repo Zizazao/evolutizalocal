@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-
 class CreateSliderRequest extends Request
 {
     /**

@@ -47,12 +47,13 @@ class postsController extends Controller
 
         $tags = Tag::lists('name', 'id');
 
-        return view('posts.postform', compact('tags'))->with('url', $url)->with('');
+        return view('posts.postform', compact('tags'))->with('url', $url);
     }
 
     /**
      * Store a newly created resource in storage.
      *
+     * @param  PostRequest  $request
      * @return Response
      */
     public function store(PostRequest $request)
@@ -81,7 +82,6 @@ class postsController extends Controller
     /**
      * Show all last posts.
      *
-     * @param  int  $id
      * @return Response
      */
     public function showAll()
@@ -131,7 +131,7 @@ class postsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  Post  $post, PostRequest $request
      * @return Response
      */
     public function update(Post $post, PostRequest $request)
@@ -148,6 +148,7 @@ class postsController extends Controller
     /**
      * Sync the tag list on the DB
      *
+     * @param Post $post, $tags[]
      */
     private function syncTags(Post $post, array $tags)
     {

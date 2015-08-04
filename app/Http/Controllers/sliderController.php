@@ -4,23 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\CreateSliderRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Slideritem;
-
+use App\Http\Requests\CreateSliderRequest;
+use App\Slider;
 
 class sliderController extends Controller
 {
     /**
-     * A user has to be identified to acces any of the controller methods
-     *
+     * Only users can access this methods
+     * 
      */
     public function __construct()
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -28,9 +27,10 @@ class sliderController extends Controller
      */
     public function index()
     {
-        $slider = Slideritem::latest()->get();
+        $lastSliders = Slider::latest()->get();
 
-        return view('slider.index', compact('slider'));
+
+        return view('slider.index')->with('lastSliders', $lastSliders);
     }
 
     /**
@@ -40,20 +40,21 @@ class sliderController extends Controller
      */
     public function create()
     {
-        return view('slider.form');
+        
+        return view('slider.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  CreateSliderRequest  $request
      * @return Response
      */
     public function store(CreateSliderRequest $request)
     {
-        $slider = new Slideritem($request->all());
+        $slider = new Slider($request->all());
 
-        $sliderSaved = \Auth::user()->Slider()->save($slider);
+        $sliderSaved = \Auth::user()->slider()->save($slider);
 
         return redirect()->action('sliderController@index');
     }
@@ -72,24 +73,27 @@ class sliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Slider  $slider
      * @return Response
      */
-    public function edit($id)
+    public function edit(Slider $Slider)
     {
-        //
+
+        return view('slider.edit', compact('Slider'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param  CreateSliderRequest  $request
+     * @param  Slider  $slider
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Slider $slider, CreateSliderRequest $request)
     {
-        //
+        $slider->update($request->all());
+
+        return redirect()->action('sliderController@index');
     }
 
     /**
@@ -98,8 +102,10 @@ class sliderController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy(Slider $slider)
     {
-        //
+        $sliderStatus = $slider->delete();
+
+        return redirect()->action('sliderController@index');
     }
 }

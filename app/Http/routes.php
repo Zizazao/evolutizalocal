@@ -11,9 +11,6 @@
 |
 */
 
-//Show index for a guest
-
-Route::get('/', 'guestController@index');
 
 //Posts
 
@@ -30,6 +27,7 @@ Route::patch('posts/{posts}', 'postsController@update');
 Route::get('posts/{posts}/edit', 'postsController@edit');
 
 Route::get('posts/{posts}/delete', 'postsController@destroy');
+
 
 //Files(images)
 
@@ -54,13 +52,40 @@ Route::patch('events/{events}/update', 'eventsController@update');
 
 Route::get('events/{events}/destroy', 'eventsController@destroy');
 
+
 //Slider
 
-Route::get('slider/create', 'sliderController@create');
+Route::get('sliders', 'sliderController@index');
 
-Route::post('slider/store', 'sliderController@store');
+Route::get('sliders/create', 'sliderController@create');
+
+Route::post('sliders/store', 'sliderController@store');
+
+Route::get('sliders/{sliders}/edit', 'sliderController@edit');
+
+Route::patch('sliders/{sliders}/update', 'sliderController@update');
+
+Route::get('sliders/{sliders}/destroy', 'sliderController@destroy');
+
+//Footer
+
+Route::get('footers', 'footerController@index');
+
+//Route::get('footers/create', 'footerController@create');
+
+//Route::post('footers/store', 'footerController@store');
+
+//Route::get('footers/{footers}/edit', 'footerController@edit');
+
+//Route::patch('footers/{footers}/update', 'footerController@update');
+
+//Route::get('footers/{footers}/destroy', 'footerController@destroy');
+
+
 
 //Guests
+
+Route::get('/', 'guestController@index');
 
 Route::get('guest/events/{events}', 'guestController@showEvent');
 
