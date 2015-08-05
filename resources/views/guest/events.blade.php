@@ -1,65 +1,48 @@
 @include('header')
 <body>
 
-        <div class="container">
+        <div class="container content-sm">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1>{{$event->title}}</h1>
 
-            <div class="content">
+                    <hr>
+                    
+                    <h3>{{$event->head}}</h3>
 
-                <div class="headline col-md-9"><h1>{{$event->title}}</h1></div>
+                    
+                    <p>{!! $event->body !!}</p>
                 
-            </div>
+                </div>
 
+                <div class="col-md-3">
+                    <div class="headline-v2 bg-color-light"><h4>Últimas Noticias</h4></div>
+                    <div class="list-inline tags-v2">
 
+                        @foreach($lastPosts as $postRight)
 
-            <div class="col-md-9">
+                        <h5><a href="{{ action('guestController@showPost', [$postRight->id]) }}">{{$postRight->titleh1}}</a>
+                        <small>{{str_limit($postRight->head, $limit="75", $end="...")}}</small></h5>
 
-                <h3>{{$event->head}}</h3>
+                        @endforeach
+                    </div>
+                </div>
 
-            </div>
+                <div class="col-md-3">
+                    <div class="headline-v2 bg-color-light"><h4>Últimos Eventos</h4></div>
+                    <div class="list-inline tags-v2">
 
-            <div class="col-md-9">
-                
-                <p>{!! $event->body !!}</p>
+                        @foreach($lastEvents as $eventRight)
 
-            </div>
-            <div class="content">
-            <div class="container col-md-3">
-                <div class="headline-v2 bg-color-light"><h4>Últimas Noticias</h4></div>
-                <div class="list-inline tags-v2">
-
-                    @foreach($lastPosts as $postRight)
-
-                    <h5><a href="{{ action('guestController@showPost', [$postRight->id]) }}">{{$postRight->titleh1}}</a>
-                    <small>{{str_limit($postRight->head, $limit="75", $end="...")}}</small></h5>
-
-                    @endforeach
+                        <h5><a href="{{ action('guestController@showEvent', [$eventRight->id]) }}">{{$eventRight->title}}</a>
+                        <small>{{str_limit($eventRight->head, $limit="75", $end="...")}}</small></h5>
+                        @endforeach
+                    </div>
                 </div>
             </div>
-
-            <div class="container col-md-3 pull-right">
-                <div class="headline-v2 bg-color-light"><h4>Últimos Eventos</h4></div>
-                <div class="list-inline tags-v2">
-
-                    @foreach($lastEvents as $eventRight)
-
-                    <h5><a href="{{ action('guestController@showEvent', [$eventRight->id]) }}">{{$eventRight->title}}</a>
-                    <small>{{str_limit($eventRight->head, $limit="75", $end="...")}}</small></h5>
-                    @endforeach
-                </div>
-            </div>
-            </div>
-
         </div>
-
-
-
-
-        <div class="container">
-            <hr>
-
-            <br>
-        </div>
-    </body>
+    <br>
+</body>
 
 
 

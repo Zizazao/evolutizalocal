@@ -1,10 +1,8 @@
 @include('header')
-
     <body>
         <div class="container content-sm">
             <div class="row">
                 <div class="col-md-9">
-
                     <h1>{{$post->titleh1}}</h1>
                     <hr>
    
@@ -16,9 +14,7 @@
 
                     <div class="blog-post-tags">
                         <ul class="list-unstyled list-inline blog-info">
-
                             <li><i class="fa fa-calendar"></i> {{$post->created_at}}</li>
-
                         </ul>
 
                         <ul class="list-unstyled list-inline blog-tags">
@@ -65,9 +61,7 @@
                         @endforeach
                     </div>
                 </div>
-
             </div>
         </div>
     </body>
-
 @include('footer')
