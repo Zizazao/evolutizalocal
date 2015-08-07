@@ -66,5 +66,10 @@ class guestController extends Controller
         return view('guest.post', compact('post'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents);
     }
 
+    public function services()
+    {
+        return view('guest.services');
+    }
+
 
 }

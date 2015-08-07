@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/animate.css')}}">
     <link rel="stylesheet" href="{{asset('assets/plugins/line-icons/line-icons.css')}}">
     <link rel="stylesheet" href="{{asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.css')}}">
     <link rel="stylesheet" href="{{asset('assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css')}}">
 
     <!-- CSS Page Style -->
@@ -45,7 +45,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="index.html">
+            <a class="logo" href="{{action('guestController@index')}} ">
                 <img src="{{asset('assets/img/logo1-default.png')}}" alt="Logo">
             </a>
             <!-- End Logo -->
@@ -781,7 +781,7 @@
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    <div class="container content">
+    <!--<div class="container content">
         <div class="row">
             <div class="col-md-6">
                 <h2 class="title-v2">OUR SERVICES</h2>
@@ -794,8 +794,10 @@
                 <img class="img-responsive" src="assets/img/mockup/mockup1.png" alt="">
             </div>
         </div>
-    </div><!--/container-->
+    </div>-->
+    <!--/container-->
     <!--=== End Content Part ===-->
+    
 
     <!--=== Cube Portfolio ===-->
     <div class="container content-sm">
@@ -807,17 +809,18 @@
         <div class="cube-portfolio container margin-bottom-20">
             <div class="margin-bottom-30">
                 <div id="filters-container" class="cbp-l-filters-text">
-                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Sectores </div> |
-                    <div data-filter=".web-design" class="cbp-filter-item"> Áreas </div> 
+                    <div data-filter=".services" class="cbp-filter-item">Sectores</div> |
+                    <div data-filter="*" class="cbp-filter-item cbp-filter-item-active">Todos</div> |
+                    <div data-filter=".areas" class="cbp-filter-item">Áreas</div> 
                 </div><!--/end Filters Container-->
             </div>
 
             <div id="grid-container" class="cbp-l-grid-gallery">
-                <div class="cbp-item illustration web-design">
+                <div class="cbp-item illustration services">
                     <a href="{{asset('assets/ajax/cube-portfolio/project1.html')}}" class="cbp-caption cbp-singlePageInline"
                        data-title="World Clock Widget<br>by Paul Flavius Nechita">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{asset('img/city-grua.jpg')}}" alt="">
+                            <img src="{{asset('img/city-grua.jpg')}}" alt="grúa">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">
@@ -829,7 +832,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="cbp-item web-design logo">
+                <div class="cbp-item services">
                     <a href="assets/ajax/cube-portfolio/project2.html" class="cbp-caption cbp-singlePageInline"
                        data-title="Bolt UI<br>by Tiberiu Neamu">
                         <div class="cbp-caption-defaultWrap">
@@ -845,7 +848,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="cbp-item illustration web-design">
+                <div class="cbp-item illustration services">
                     <a href="assets/ajax/cube-portfolio/project3.html" class="cbp-caption cbp-singlePageInline"
                        data-title="WhereTO App<br>by Tiberiu Neamu">
                         <div class="cbp-caption-defaultWrap">
@@ -861,11 +864,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="cbp-item web-design illustration">
+                <div class="cbp-item services illustration">
                     <a href="assets/ajax/cube-portfolio/project4.html" class="cbp-caption cbp-singlePageInline"
                        data-title="iDevices<br>by Tiberiu Neamu">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{asset('img/empire-state-building.jpg')}}" alt="empire-state-building">
+                            <img src="{{asset('img/empire-state-building.jpg')}}" alt="empire state building">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">
@@ -877,11 +880,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="cbp-item web-design graphic">
+                <div class="cbp-item services graphic">
                     <a href="assets/ajax/cube-portfolio/project5.html" class="cbp-caption cbp-singlePageInline"
                        data-title="Seemple* Music for iPad<br>by Tiberiu Neamu">
                         <div class="cbp-caption-defaultWrap">
-                            <img src="{{asset('img/posts.jpg')}}" alt="posts">
+                            <img src="{{asset('img/planos.jpg')}}" alt="posts">
                         </div>
                         <div class="cbp-caption-activeWrap">
                             <div class="cbp-l-caption-alignLeft">
@@ -893,7 +896,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="cbp-item illustration web-design graphic">
+                <div class="cbp-item illustration services graphic">
                     <a href="assets/ajax/cube-portfolio/project6.html" class="cbp-caption cbp-singlePageInline"
                        data-title="Remind~Me Widget<br>by Tiberiu Neamu">
                         <div class="cbp-caption-defaultWrap">
@@ -909,12 +912,186 @@
                         </div>
                     </a>
                 </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project7.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/coins.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Fiscal Y Tributario</div>
+                                    <div class="cbp-l-caption-desc">Fiscal Y Tributario</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project8.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/sydney-puerto.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Mercantil y Societario</div>
+                                    <div class="cbp-l-caption-desc">Mercantil y Societario</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project9.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/taxes.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Contable</div>
+                                    <div class="cbp-l-caption-desc">Contable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project10.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/city-grua.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Reestructuraciones e insolvencias</div>
+                                    <div class="cbp-l-caption-desc">Reestructuraciones e insolvencias</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project11.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/stock-exchange.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Financiero y Mercado de Valores</div>
+                                    <div class="cbp-l-caption-desc">Financiero y Mercado de Valores</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project12.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/connect.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Fusiones y Adquisiciones</div>
+                                    <div class="cbp-l-caption-desc">Fusiones y Adquisiciones</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project13.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/tools.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Propiedad Industrial e Intelectual</div>
+                                    <div class="cbp-l-caption-desc">Propiedad Industrial e Intelectual</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project14.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/recursos-humanos.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Recursos Humanos</div>
+                                    <div class="cbp-l-caption-desc">Recursos Humanos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project15.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/construction.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Laboral</div>
+                                    <div class="cbp-l-caption-desc">Laboral</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project16.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/city-grua.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Sectores Regulados</div>
+                                    <div class="cbp-l-caption-desc">Sectores Regulados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cbp-item areas">
+                    <a href="{{asset('assets/ajax/cube-portfolio/project17.html')}}" class="cbp-caption cbp-singlePageInline"
+                       data-title="World Clock Widget<br>by Paul Flavius Nechita">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="{{asset('img/files.jpg')}}" alt="">
+                        </div>
+                        <div class="cbp-caption-activeWrap">
+                            <div class="cbp-l-caption-alignLeft">
+                                <div class="cbp-l-caption-body">
+                                    <div class="cbp-l-caption-title">Administrativo</div>
+                                    <div class="cbp-l-caption-desc">Administrativo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div><!--/end Grid Container-->
         </div>
     </div>
     <!--=== End Cube Portfolio ===-->
-
-    
 
      <!--=== Footer Version 1 ===-->
     <div class="footer-v1">

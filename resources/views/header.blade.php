@@ -108,7 +108,7 @@
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Visitantes</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="One-Page/index.html">- One Page Template</a></li>
+                                    <li><a href="{{action('guestController@services')}} ">Servicios</a></li>
                                     <li><a href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
                                     <li><a href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
                                     <li><a href="One-Page/one_page_home2.html">- One Page Option 2</a></li>

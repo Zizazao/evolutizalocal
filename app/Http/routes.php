@@ -91,15 +91,7 @@ Route::get('guest/events/{events}', 'guestController@showEvent');
 
 Route::get('guest/posts/{posts}', 'guestController@showPost');
 
-Route::get('services', function()
-{
-	return view('guest.services');
-});
-
-Route::get('services/sectors', function()
-{
-	return view('guest.sectors');
-});
+Route::get('services', 'guestController@services' );
 
 
 

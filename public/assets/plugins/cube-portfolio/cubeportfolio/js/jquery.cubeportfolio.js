@@ -1701,7 +1701,7 @@
             // activate counter for filters
             parent.$obj.cubeportfolio('showCounter', filter.find('.cbp-filter-item'), function() {
                 // read from url and change filter active
-                var match = /#cbpf=(.*?)([#|?&]|$)/gi.exec(location.href),
+                var match = /#cbpf=(.services)(.*?)([#|?&]|$)/gi.exec(location.href),
                     item;
                 if (match !== null) {
                     item = filter.find('.cbp-filter-item').filter('[data-filter="' + match[1] + '"]');
