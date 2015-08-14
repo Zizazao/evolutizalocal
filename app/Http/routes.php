@@ -93,6 +93,10 @@ Route::get('guest/posts/{posts}', 'guestController@showPost');
 
 Route::get('services', 'guestController@services' );
 
+Route::get('aboutus', 'guestController@aboutUs');
+
+Route::get('offices', 'guestController@offices');
+
 
 
 Route::controllers([

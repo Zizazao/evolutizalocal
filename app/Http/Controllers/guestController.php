@@ -71,5 +71,15 @@ class guestController extends Controller
         return view('guest.services');
     }
 
+    public function aboutUs()
+    {
+        return view('guest.about_us');
+    }
+
+    public function offices()
+    {
+        return view('guest.offices');
+    }
+
 
 }
