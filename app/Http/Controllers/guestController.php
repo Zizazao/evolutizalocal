@@ -81,5 +81,10 @@ class guestController extends Controller
         return view('guest.offices');
     }
 
+    public function training()
+    {
+        return view('guest.training');
+    }
+
 
 }

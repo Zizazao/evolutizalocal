@@ -97,6 +97,9 @@ Route::get('aboutus', 'guestController@aboutUs');
 
 Route::get('offices', 'guestController@offices');
 
+Route::get('training', 'guestController@training');
+
+
 
 
 Route::controllers([
