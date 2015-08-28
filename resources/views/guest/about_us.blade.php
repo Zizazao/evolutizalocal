@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="col-md-6 md-margin-bottom-50">
-                    <img class="img-responsive" src="assets/img/mockup/4.png" alt="">
+                    <img class="img-responsive" src="assets/img/sliders/6.jpg" alt="">
                 </div>
 
             </div><!--/end row-->
@@ -52,7 +52,7 @@
 
         <div class="row">
             <div class="col-md-6 md-margin-bottom-50">
-                <img class="img-responsive" src="assets/img/mockup/4.png" alt="">
+                <img class="img-responsive" src="assets/img/sliders/5.jpg" alt="">
             </div>
             <div class="col-md-6">
                 <div class="row">

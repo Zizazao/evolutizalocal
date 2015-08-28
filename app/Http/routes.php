@@ -99,6 +99,7 @@ Route::get('offices', 'guestController@offices');
 
 Route::get('training', 'guestController@training');
 
+Route::get('team', 'guestController@team');
 
 
 

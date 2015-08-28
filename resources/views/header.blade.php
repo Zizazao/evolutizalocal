@@ -142,7 +142,7 @@
 
                     <!-- Equipo -->
                     <li>
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="{{action('guestController@team')}}">
                             Equipo
                         </a>
                     </li>

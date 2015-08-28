@@ -68,22 +68,62 @@ class guestController extends Controller
 
     public function services()
     {
-        return view('guest.services');
+        $lastSliders = Slider::latest()->take(1)->get();
+
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+        return view('guest.services')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function aboutUs()
     {
-        return view('guest.about_us');
+        $lastSliders = Slider::latest()->take(1)->get();
+
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+        return view('guest.about_us')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function offices()
     {
-        return view('guest.offices');
+        $lastSliders = Slider::latest()->take(1)->get();
+
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+        return view('guest.offices')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function training()
     {
-        return view('guest.training');
+        $lastSliders = Slider::latest()->take(1)->get();
+
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+        return view('guest.training')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+    }
+
+    public function team()
+    {
+        $lastSliders = Slider::latest()->take(1)->get();
+
+        $lastPosts= Post::latest()->take(2)->get();
+        
+        $lastEvents = Event::latest()->take(2)->get();
+
+        $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
+        return view('guest.team')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
 
