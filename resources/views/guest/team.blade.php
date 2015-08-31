@@ -19,7 +19,7 @@
         <div class="row team-v5 margin-bottom-30">
             <div class="col-sm-4 sm-margin-bottom-50">
                 <div class="team-img">
-                    <img class="img-responsive" src="img/DSC_0693_modificada.jpg" alt="">
+                    <img class="img-responsive" src="img/DSC_0856_modificada.jpg" alt="">
                     <div class="team-hover">
                         <ul class="list-inline team-social-v5">
                             <li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>

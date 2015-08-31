@@ -5,8 +5,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="{{action('guestController@index')}}"><img id="logo-footer" class="footer-logo" src="{{asset('img/logo_footer.png')}}" alt=""></a>
-                        <p>EVOLUTIZA está dedicada a la Dirección Integral de Proyectos e Inversiones, con profesionales enfocados a la consecución de objetivos, el control de los recursos y el cumplimiento de plazos, que conforman equipos multidisciplinares integrados y altamente cualificados.</p>
+                        <a href="{{action('guestController@index')}}"><img width="190px" id="logo-footer" class="footer-logo" src="{{asset('img/Evolutiza02_2.png')}}" alt=""></a>
                         
                     </div><!--/col-md-3-->
                     <!-- End About -->
@@ -14,11 +13,11 @@
                     <!-- Latest -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
-                            <div class="headline"><h2>Latest Posts</h2></div>
+                            <div class="headline"><h2>Últimas Noticias</h2></div>
                             <ul class="list-unstyled latest-list">
                                 @foreach($lastPosts as $post)
                                 <li>
-                                    <a href="#">{{$post->titleh1}}</a>
+                                    <a href="{{ action('guestController@showPost', [$post->id]) }}">{{$post->titleh1}}</a>
                                     <small>{{$post->created_at}}</small>
                                 </li>
                                 @endforeach
@@ -30,12 +29,12 @@
 
                     <!-- Link List -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2>Useful Links</h2></div>
+                        <div class="headline"><h2>Menú</h2></div>
                         <ul class="list-unstyled link-list">
                             <li><a href="{{action('guestController@aboutUs')}}">Quienes somos</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="{{action('guestController@services')}}">Servicios</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Equipo</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Oficinas</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{{action('guestController@team')}}">Equipo</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{{action('guestController@offices')}}">Oficinas</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="{{action('guestController@training')}}">Formación</a><i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div><!--/col-md-3-->
@@ -43,13 +42,10 @@
 
                     <!-- Address -->
                     <div class="col-md-3 map-img md-margin-bottom-40">
-                        <div class="headline"><h2>Contact Us</h2></div>
+                        <div class="headline"><h2>Contáctanos</h2></div>
                         <address class="md-margin-bottom-40">
-                            25, Lorem Lis Street, Orange <br />
-                            California, US <br />
-                            Phone: 800 123 3456 <br />
-                            Fax: 800 123 3456 <br />
-                            Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                            Teléfono: +0034 911 607 113 <br />
+                            Email: info@evolutiza.com.es
                         </address>
                     </div><!--/col-md-3-->
                     <!-- End Address -->
@@ -63,7 +59,7 @@
                     <div class="col-md-6">
                         <p>
                             2015 &copy; All Rights Reserved.
-                           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                           <a href="#">Advertencia Legal</a> 
                         </p>
                     </div>
 
@@ -74,12 +70,7 @@
                                 <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
-                                    <i class="fa fa-skype"></i>
-                                </a>
-                            </li>
+                            </li>                            
                             <li>
                                 <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
                                     <i class="fa fa-google-plus"></i>
@@ -89,20 +80,10 @@
                                 <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
                                     <i class="fa fa-linkedin"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
-                                    <i class="fa fa-pinterest"></i>
-                                </a>
-                            </li>
+                            </li>                            
                             <li>
                                 <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
                                     <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
                                 </a>
                             </li>
                         </ul>

@@ -3,13 +3,13 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Boxed Page | Unify - Responsive Website Template</title>
+    <title>Evolutiza Abogados y Asesores Tributarios | {{$title}}</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Abogados en España, Chile, El Salvador, Perú, Reino Unido, Suiza">
+    <meta name="author" content="Francisco José Montañez Vega">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -47,7 +47,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="{{action('guestController@index')}}">
-                <img heght="100px" width="200px" src="{{asset('img/Evolutiza02_2.png')}}" alt="Logo">
+                <img width="250px" src="{{asset('img/logo_footer.png')}}" alt="Logo">
             </a>
             <!-- End Logo -->
 
@@ -56,18 +56,15 @@
                 <ul class="loginbar pull-right">
                     <li class="hoverSelector">
                         <i class="fa fa-globe"></i>
-                        <a>Languages</a>
+                        <a>Idiomas</a>
                         <ul class="languages hoverSelectorBlock">
                             <li class="active">
-                                <a href="#">English <i class="fa fa-check"></i></a>
+                                <a href="#">English</a>
                             </li>
-                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">Spanish<i class="fa fa-check"></i></a></li>
                         </ul>
                     </li>
-                    <li class="topbar-devider"></li>
-                    <li><a href="page_faq.html">Help</a></li>
-                    <li class="topbar-devider"></li>
-                    <li><a href="page_login.html">Login</a></li>
+
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -103,21 +100,6 @@
                                     <li><a href="{{action('sliderController@create')}}">Añadir Slider</a></li>
                                 </ul>
                             </li>
-
-                            <!-- Evolutiza Guests -->
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Visitantes</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{action('guestController@services')}} ">Servicios</a></li>
-                                    <li><a href="One-Page/one_page_dark.html">- One Page Dark Option</a></li>
-                                    <li><a href="One-Page/one_page_home1.html">- One Page Option 1</a></li>
-                                    <li><a href="One-Page/one_page_home2.html">- One Page Option 2</a></li>
-                                    <li><a href="One-Page/one_page_home3.html">- One Page Option 3</a></li>
-                                </ul>
-                            </li>
-                            <!-- End Evolutiza Guests -->
-
-                            
                         </ul>
                     </li>
                     <!-- End Home -->
@@ -150,7 +132,7 @@
 
                     <!-- Oficinas -->
                     <li>
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="{{action('guestController@offices')}}">
                             Oficinas
                         </a>
                     </li>

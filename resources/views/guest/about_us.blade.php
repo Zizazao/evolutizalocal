@@ -3,7 +3,7 @@
     <!--=== Breadcrumbs v3 ===-->
     <div class="breadcrumbs-v3 img-v3 text-center">
         <div class="container">
-            <h1 style="text-transform: lowercase;">EVOLUTIZA Abogados & Asesores Tributarios</h1>
+            <h1 style="text-transform: lowercase;">Evolutiza Abogados & Asesores Tributarios</h1>
             <p style="text-transform: lowercase;">Descubre más sobre nosotros</p>
         </div><!--/end container-->
     </div>
@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
-                    <p><span style="color:#5fb611;">EVOLUTIZA Abogados & Asesores Tributarios</span> es grupo de despachos profesionales que cuenta con una sólida experiencia internacional. Contamos con presencia en España, Chile, El Salvador, Perú, Reino Unido y Suiza, además de corresponsalías y despachos colaboradores en Brasil, México, Colombia y USA. </p>
+                    <p><span style="color:#5fb611;">Evolutiza Abogados & Asesores Tributarios</span> es grupo de despachos profesionales que cuenta con una sólida experiencia internacional. Contamos con presencia en España, Chile, El Salvador, Perú, Reino Unido y Suiza, además de corresponsalías y despachos colaboradores en Brasil, México, Colombia y USA. </p>
                     <p>Estamos dedicados al asesoramiento integral en aspectos legales y tributarios y somos capaces de prestar servicios de establecimiento empresarial en más de 50 países.  </p>
                     <p>Somos especialistas en la práctica internacional en el  ámbito legal y fiscal, y somos líderes en el asesoramiento en los mercados latinoamericanos y los negocios entre la Unión Europea, USA y los países iberoamericanos. </p><br>
                 </div>
@@ -29,7 +29,7 @@
             <div class="col-md-12">
                 <blockquote class="bq-green hero-default text-left">
 
-                    <p><span style="color:#5fb611;">Lo que es importante para nosotros</span> <br> EVOLUTIZA Abogados & Asesores Tributarios es un miembro activo de su entorno y nos comprometemos con la igualdad de oportunidades en la sociedad, las posibilidades de acceso a los medios de formación, el desarrollo del talento individual para ser puesto al servicio de la sociedad, la defensa y difusión del arte y la cultura, la educación y recuperación de Valores por parte de los más desfavorecidos, y el acceso a puestos de trabajo dignos.
+                    <p><span style="color:#5fb611;">Lo que es importante para nosotros</span> <br> Evolutiza Abogados & Asesores Tributarios es un miembro activo de su entorno y nos comprometemos con la igualdad de oportunidades en la sociedad, las posibilidades de acceso a los medios de formación, el desarrollo del talento individual para ser puesto al servicio de la sociedad, la defensa y difusión del arte y la cultura, la educación y recuperación de Valores por parte de los más desfavorecidos, y el acceso a puestos de trabajo dignos.
 
     Destinamos al menos el 0,7% de su facturación anual bruta a proyectos e iniciativas en Obra Social. Este es un compromiso que está incluido en nuestra política corporativa y nuestro código de conducta. </em></p>
                 </blockquote>
@@ -42,10 +42,9 @@
 
 
     <!--=== Container Part ===-->
-    <div class="container content-sm">
         <div class="headline-center margin-bottom-60">
             <h2>En pocas palabras...</h2>
-            <p>¿por qué estamos convencidos de que <span style="color:#5fb611;">EVOLUTIZA Abogados & Asesores Tributarios</span> <br>
+            <p>¿por qué estamos convencidos de que <span style="color:#5fb611;">Evolutiza Abogados & Asesores Tributarios</span> <br>
             es la mejor opción?. 
             </p>
         </div>
@@ -62,13 +61,11 @@
                         <li><i class="fa fa-angle-right"></i>Tenemos amplios conocimientos de los sistemas legales, jurídicos y tributarios de los sectores y países en los que actuamos.</li>
                         <li><i class="fa fa-angle-right"></i>Somos capaces de prestar nuestros servicios de asesoramiento y gestión de manera continuada durante todo el ciclo de vida de su actividad y todas las fases de su operación.</li>
                         <li><i class="fa fa-angle-right"></i>Somos conscientes del funcionamiento profesional y los requisitos de su actividad, y somos capaces de aportar soluciones flexibles y encontrar soluciones satisfactorias a los problemas, alcanzando el éxito para nuestros clientes.</li>
-                        
                     </ul>
                     
                 </div>
             </div>
         </div><!--/end row-->
-    </div>
     <!--=== End Container Part ===-->
 
     <!--=== Service Block v5 ===-->

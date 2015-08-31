@@ -28,7 +28,9 @@ class guestController extends Controller
 
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
 
-        return view('guest.welcome')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        $title = '';
+
+        return view('guest.welcome')->with('lastPosts', $lastPosts)->with('title', $title)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     /**
@@ -43,7 +45,9 @@ class guestController extends Controller
 
         $lastEvents = Event::latest()->get();
 
-        return view('guest.events', compact('event'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents);
+        $title = $event->title;
+
+        return view('guest.events', compact('event'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('title', $title);
     }
 
     /**
@@ -59,11 +63,12 @@ class guestController extends Controller
 
         $lastEvents = Event::latest()->take(4)->get();
 
+        $title = $post->titleh1;
         if(is_null($post))
         {
             return view('errors.noRecords');
         }    
-        return view('guest.post', compact('post'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents);
+        return view('guest.post', compact('post'))->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('title', $title);
     }
 
     public function services()
@@ -74,8 +79,10 @@ class guestController extends Controller
         
         $lastEvents = Event::latest()->take(2)->get();
 
+        $title = 'Servicios';
+
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
-        return view('guest.services')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        return view('guest.services')->with('title', $title)->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function aboutUs()
@@ -86,8 +93,10 @@ class guestController extends Controller
         
         $lastEvents = Event::latest()->take(2)->get();
 
+        $title = 'Sobre Nosotros';
+
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
-        return view('guest.about_us')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        return view('guest.about_us')->with('title', $title)->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function offices()
@@ -98,8 +107,10 @@ class guestController extends Controller
         
         $lastEvents = Event::latest()->take(2)->get();
 
+        $title = 'Oficinas';
+
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
-        return view('guest.offices')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        return view('guest.offices')->with('title', $title)->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function training()
@@ -110,8 +121,10 @@ class guestController extends Controller
         
         $lastEvents = Event::latest()->take(2)->get();
 
+        $title = 'Formación';
+
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
-        return view('guest.training')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        return view('guest.training')->with('title', $title)->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
     public function team()
@@ -122,8 +135,10 @@ class guestController extends Controller
         
         $lastEvents = Event::latest()->take(2)->get();
 
+        $title = 'Equipo';
+
         $lastEvents2 = Event::latest()->skip(2)->take(2)->get();
-        return view('guest.team')->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
+        return view('guest.team')->with('title', $title)->with('lastPosts', $lastPosts)->with('lastEvents', $lastEvents)->with('lastEvents2', $lastEvents2)->with('lastSliders', $lastSliders);
     }
 
 
