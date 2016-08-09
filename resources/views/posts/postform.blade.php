@@ -111,7 +111,6 @@
 
     </body>
 
-    <!-- ToDo = make a way to store new tags from json GULP/SCSS/-->
 
     <script type="text/javascript">
         $('#tag_list').select2();
